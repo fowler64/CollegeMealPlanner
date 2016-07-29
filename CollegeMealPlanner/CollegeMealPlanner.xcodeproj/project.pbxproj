@@ -1,0 +1,405 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9327AB371D4BCA1E00AE7A62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9327AB361D4BCA1E00AE7A62 /* AppDelegate.swift */; };
+		9327AB391D4BCA1E00AE7A62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9327AB381D4BCA1E00AE7A62 /* ViewController.swift */; };
+		9327AB3C1D4BCA1E00AE7A62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9327AB3A1D4BCA1E00AE7A62 /* Main.storyboard */; };
+		9327AB3E1D4BCA1E00AE7A62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9327AB3D1D4BCA1E00AE7A62 /* Assets.xcassets */; };
+		9327AB411D4BCA1E00AE7A62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9327AB3F1D4BCA1E00AE7A62 /* LaunchScreen.storyboard */; };
+		9327AB4C1D4BCA1F00AE7A62 /* CollegeMealPlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9327AB4B1D4BCA1F00AE7A62 /* CollegeMealPlannerTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9327AB481D4BCA1F00AE7A62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9327AB2B1D4BCA1E00AE7A62 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9327AB321D4BCA1E00AE7A62;
+			remoteInfo = CollegeMealPlanner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9327AB331D4BCA1E00AE7A62 /* CollegeMealPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollegeMealPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9327AB361D4BCA1E00AE7A62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9327AB381D4BCA1E00AE7A62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9327AB3B1D4BCA1E00AE7A62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9327AB3D1D4BCA1E00AE7A62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9327AB401D4BCA1E00AE7A62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9327AB421D4BCA1E00AE7A62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9327AB471D4BCA1F00AE7A62 /* CollegeMealPlannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollegeMealPlannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9327AB4B1D4BCA1F00AE7A62 /* CollegeMealPlannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeMealPlannerTests.swift; sourceTree = "<group>"; };
+		9327AB4D1D4BCA1F00AE7A62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9327AB301D4BCA1E00AE7A62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9327AB441D4BCA1F00AE7A62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9327AB2A1D4BCA1E00AE7A62 = {
+			isa = PBXGroup;
+			children = (
+				9327AB351D4BCA1E00AE7A62 /* CollegeMealPlanner */,
+				9327AB4A1D4BCA1F00AE7A62 /* CollegeMealPlannerTests */,
+				9327AB341D4BCA1E00AE7A62 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9327AB341D4BCA1E00AE7A62 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9327AB331D4BCA1E00AE7A62 /* CollegeMealPlanner.app */,
+				9327AB471D4BCA1F00AE7A62 /* CollegeMealPlannerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9327AB351D4BCA1E00AE7A62 /* CollegeMealPlanner */ = {
+			isa = PBXGroup;
+			children = (
+				9327AB361D4BCA1E00AE7A62 /* AppDelegate.swift */,
+				9327AB381D4BCA1E00AE7A62 /* ViewController.swift */,
+				9327AB3A1D4BCA1E00AE7A62 /* Main.storyboard */,
+				9327AB3D1D4BCA1E00AE7A62 /* Assets.xcassets */,
+				9327AB3F1D4BCA1E00AE7A62 /* LaunchScreen.storyboard */,
+				9327AB421D4BCA1E00AE7A62 /* Info.plist */,
+			);
+			path = CollegeMealPlanner;
+			sourceTree = "<group>";
+		};
+		9327AB4A1D4BCA1F00AE7A62 /* CollegeMealPlannerTests */ = {
+			isa = PBXGroup;
+			children = (
+				9327AB4B1D4BCA1F00AE7A62 /* CollegeMealPlannerTests.swift */,
+				9327AB4D1D4BCA1F00AE7A62 /* Info.plist */,
+			);
+			path = CollegeMealPlannerTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9327AB321D4BCA1E00AE7A62 /* CollegeMealPlanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9327AB501D4BCA1F00AE7A62 /* Build configuration list for PBXNativeTarget "CollegeMealPlanner" */;
+			buildPhases = (
+				9327AB2F1D4BCA1E00AE7A62 /* Sources */,
+				9327AB301D4BCA1E00AE7A62 /* Frameworks */,
+				9327AB311D4BCA1E00AE7A62 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CollegeMealPlanner;
+			productName = CollegeMealPlanner;
+			productReference = 9327AB331D4BCA1E00AE7A62 /* CollegeMealPlanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9327AB461D4BCA1F00AE7A62 /* CollegeMealPlannerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9327AB531D4BCA1F00AE7A62 /* Build configuration list for PBXNativeTarget "CollegeMealPlannerTests" */;
+			buildPhases = (
+				9327AB431D4BCA1F00AE7A62 /* Sources */,
+				9327AB441D4BCA1F00AE7A62 /* Frameworks */,
+				9327AB451D4BCA1F00AE7A62 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9327AB491D4BCA1F00AE7A62 /* PBXTargetDependency */,
+			);
+			name = CollegeMealPlannerTests;
+			productName = CollegeMealPlannerTests;
+			productReference = 9327AB471D4BCA1F00AE7A62 /* CollegeMealPlannerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9327AB2B1D4BCA1E00AE7A62 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Grant Fowler";
+				TargetAttributes = {
+					9327AB321D4BCA1E00AE7A62 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					9327AB461D4BCA1F00AE7A62 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 9327AB321D4BCA1E00AE7A62;
+					};
+				};
+			};
+			buildConfigurationList = 9327AB2E1D4BCA1E00AE7A62 /* Build configuration list for PBXProject "CollegeMealPlanner" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9327AB2A1D4BCA1E00AE7A62;
+			productRefGroup = 9327AB341D4BCA1E00AE7A62 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9327AB321D4BCA1E00AE7A62 /* CollegeMealPlanner */,
+				9327AB461D4BCA1F00AE7A62 /* CollegeMealPlannerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9327AB311D4BCA1E00AE7A62 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9327AB411D4BCA1E00AE7A62 /* LaunchScreen.storyboard in Resources */,
+				9327AB3E1D4BCA1E00AE7A62 /* Assets.xcassets in Resources */,
+				9327AB3C1D4BCA1E00AE7A62 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9327AB451D4BCA1F00AE7A62 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9327AB2F1D4BCA1E00AE7A62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9327AB391D4BCA1E00AE7A62 /* ViewController.swift in Sources */,
+				9327AB371D4BCA1E00AE7A62 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9327AB431D4BCA1F00AE7A62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9327AB4C1D4BCA1F00AE7A62 /* CollegeMealPlannerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9327AB491D4BCA1F00AE7A62 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9327AB321D4BCA1E00AE7A62 /* CollegeMealPlanner */;
+			targetProxy = 9327AB481D4BCA1F00AE7A62 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9327AB3A1D4BCA1E00AE7A62 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9327AB3B1D4BCA1E00AE7A62 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9327AB3F1D4BCA1E00AE7A62 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9327AB401D4BCA1E00AE7A62 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9327AB4E1D4BCA1F00AE7A62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9327AB4F1D4BCA1F00AE7A62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9327AB511D4BCA1F00AE7A62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CollegeMealPlanner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.CollegeMealPlanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9327AB521D4BCA1F00AE7A62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CollegeMealPlanner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.CollegeMealPlanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9327AB541D4BCA1F00AE7A62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CollegeMealPlannerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.CollegeMealPlannerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CollegeMealPlanner.app/CollegeMealPlanner";
+			};
+			name = Debug;
+		};
+		9327AB551D4BCA1F00AE7A62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CollegeMealPlannerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.CollegeMealPlannerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CollegeMealPlanner.app/CollegeMealPlanner";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9327AB2E1D4BCA1E00AE7A62 /* Build configuration list for PBXProject "CollegeMealPlanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9327AB4E1D4BCA1F00AE7A62 /* Debug */,
+				9327AB4F1D4BCA1F00AE7A62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9327AB501D4BCA1F00AE7A62 /* Build configuration list for PBXNativeTarget "CollegeMealPlanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9327AB511D4BCA1F00AE7A62 /* Debug */,
+				9327AB521D4BCA1F00AE7A62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9327AB531D4BCA1F00AE7A62 /* Build configuration list for PBXNativeTarget "CollegeMealPlannerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9327AB541D4BCA1F00AE7A62 /* Debug */,
+				9327AB551D4BCA1F00AE7A62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9327AB2B1D4BCA1E00AE7A62 /* Project object */;
+}
