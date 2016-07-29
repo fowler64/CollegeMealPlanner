@@ -13,6 +13,8 @@
 		9327AB3E1D4BCA1E00AE7A62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9327AB3D1D4BCA1E00AE7A62 /* Assets.xcassets */; };
 		9327AB411D4BCA1E00AE7A62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9327AB3F1D4BCA1E00AE7A62 /* LaunchScreen.storyboard */; };
 		9327AB4C1D4BCA1F00AE7A62 /* CollegeMealPlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9327AB4B1D4BCA1F00AE7A62 /* CollegeMealPlannerTests.swift */; };
+		93703DFF1D4C0AF400A030F9 /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93703DFE1D4C0AF400A030F9 /* MealViewController.swift */; };
+		93703E011D4C0B0400A030F9 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93703E001D4C0B0400A030F9 /* Meal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		9327AB471D4BCA1F00AE7A62 /* CollegeMealPlannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollegeMealPlannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9327AB4B1D4BCA1F00AE7A62 /* CollegeMealPlannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeMealPlannerTests.swift; sourceTree = "<group>"; };
 		9327AB4D1D4BCA1F00AE7A62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93703DFE1D4C0AF400A030F9 /* MealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
+		93703E001D4C0B0400A030F9 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 				9327AB361D4BCA1E00AE7A62 /* AppDelegate.swift */,
 				9327AB381D4BCA1E00AE7A62 /* ViewController.swift */,
 				9327AB3A1D4BCA1E00AE7A62 /* Main.storyboard */,
+				93703DFE1D4C0AF400A030F9 /* MealViewController.swift */,
+				93703E001D4C0B0400A030F9 /* Meal.swift */,
 				9327AB3D1D4BCA1E00AE7A62 /* Assets.xcassets */,
 				9327AB3F1D4BCA1E00AE7A62 /* LaunchScreen.storyboard */,
 				9327AB421D4BCA1E00AE7A62 /* Info.plist */,
@@ -197,8 +203,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93703E011D4C0B0400A030F9 /* Meal.swift in Sources */,
 				9327AB391D4BCA1E00AE7A62 /* ViewController.swift in Sources */,
 				9327AB371D4BCA1E00AE7A62 /* AppDelegate.swift in Sources */,
+				93703DFF1D4C0AF400A030F9 /* MealViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +398,7 @@
 				9327AB521D4BCA1F00AE7A62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9327AB531D4BCA1F00AE7A62 /* Build configuration list for PBXNativeTarget "CollegeMealPlannerTests" */ = {
 			isa = XCConfigurationList;
@@ -398,6 +407,7 @@
 				9327AB551D4BCA1F00AE7A62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
