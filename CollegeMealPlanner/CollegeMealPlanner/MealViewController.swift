@@ -17,11 +17,13 @@ class MealViewController: UIViewController {
     
     @IBOutlet weak var restaurantText: UITextField!
     
-    
+    var last: ViewController?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -33,7 +35,7 @@ class MealViewController: UIViewController {
     //MARK: Actions
     @IBAction func finishMeal(sender: AnyObject) {
         
-        var meals = mealCounter.selectedSegmentIndex
+        let meals = mealCounter.selectedSegmentIndex
         var dinings: Double?
         var restaurantName: String?
         
@@ -47,23 +49,11 @@ class MealViewController: UIViewController {
         }
         
         if meals != 0 || dinings != nil{
-            var meal = Meal(meals: meals, dining: dinings, restaurant: restaurantName)
+            let meal = Meal(meals: meals, dining: dinings, restaurant: restaurantName)
+            last?.addMeal(meal)
+            navigationController?.popViewControllerAnimated(true)
         }
+        
     }
     
-//    //MARK: Stuff for admob ad
-//    @IBOutlet weak var bannerView: GADBannerView!
-//    
-//    func adFunction(){
-//        bannerView.adUnitID = "ca-app-pub-4551183276117497/9211445162"
-//        bannerView.rootViewController = self
-//        let request: GADRequest = GADRequest()
-//        
-//        
-//        // for actual ad comment next line
-//        request.testDevices = [kGADSimulatorID]
-//        
-//        
-//        bannerView.loadRequest(request)
-//    }
 }

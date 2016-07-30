@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="tNh-MC-HSj">
             <objects>
-                <viewController id="oYb-QG-bQT" sceneMemberID="viewController">
+                <viewController id="oYb-QG-bQT" customClass="ViewController" customModule="CollegeMealPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nDl-vB-Aaw"/>
                         <viewControllerLayoutGuide type="bottom" id="Z44-Ti-Ar0"/>
@@ -21,17 +21,20 @@
                                 <rect key="frame" x="268" y="285" width="65" height="30"/>
                                 <state key="normal" title="Add meal"/>
                                 <connections>
-                                    <segue destination="fHR-ks-uAW" kind="show" id="34U-Zz-5Mh"/>
+                                    <action selector="addMealButton:" destination="oYb-QG-bQT" eventType="touchUpInside" id="IIw-ux-NFU"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="AKX-QG-gJz"/>
+                    <connections>
+                        <segue destination="fHR-ks-uAW" kind="show" identifier="addMealSegue" id="3Ki-Ug-28b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hys-t3-1dr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1641" y="1104"/>
+            <point key="canvasLocation" x="1638" y="1104"/>
         </scene>
         <!--Meal View Controller-->
         <scene sceneID="Inx-7A-b2a">

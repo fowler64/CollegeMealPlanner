@@ -19,7 +19,19 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func addMeal(meal: Meal){
+        print("added meal into viewcontroller with \(meal.meals) \(meal.dining) \(meal.restaurant)")
+    }
 
+    @IBAction func addMealButton(sender: AnyObject) {
+        performSegueWithIdentifier("addMealSegue", sender: self )
+    }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let myController = segue.destinationViewController as? MealViewController {
+            myController.last = self
+        }
+    }
 
 }
-
