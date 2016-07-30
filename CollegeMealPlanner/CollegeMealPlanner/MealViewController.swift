@@ -32,6 +32,23 @@ class MealViewController: UIViewController {
     
     //MARK: Actions
     @IBAction func finishMeal(sender: AnyObject) {
+        
+        var meals = mealCounter.selectedSegmentIndex
+        var dinings: Double?
+        var restaurantName: String?
+        
+        if diningText.hasText(){
+            dinings = Double(diningText.text!)
+            print("wrote \(dinings)")
+        }
+        
+        if restaurantText.hasText(){
+            restaurantName = restaurantText.text
+        }
+        
+        if meals != 0 || dinings != nil{
+            var meal = Meal(meals: meals, dining: dinings, restaurant: restaurantName)
+        }
     }
     
 //    //MARK: Stuff for admob ad
