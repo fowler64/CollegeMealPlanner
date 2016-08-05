@@ -32,4 +32,48 @@ class Meal {
         print("created new meal with values \(self.meals) \(self.dining) \(self.restaurant)")
         print("on " + date.description)
     }
+    
+    func getDateString() -> String{
+        var dateString = String()
+        var x = 1
+        
+        if (NSDateComponents().day - dateComp.day) < 7{
+            x = 0
+            dateString.appendContentsOf(" ")
+        }
+        
+        //add the weekday
+        var dateArray = date.descriptionWithLocale(date).componentsSeparatedByCharactersInSet(NSCharacterSet(charactersInString: ","))
+        dateString.appendContentsOf(dateArray[x])
+        //add the time
+        var timeArray = dateArray[2].componentsSeparatedByString(":")
+        dateString.appendContentsOf(timeArray[0].substringWithRange(Range<String.Index>(timeArray[0].startIndex.advancedBy(5) ..< timeArray[0].endIndex.advancedBy(0))))
+        dateString.appendContentsOf(":")
+        dateString.appendContentsOf(timeArray[1])
+        //add am or pm
+        if dateArray[2].containsString("PM"){
+            dateString.appendContentsOf(" PM")
+        }else {
+            dateString.appendContentsOf(" AM")
+        }
+
+        
+        return dateString
+    }
+    
+    func getPayString() -> String{
+        var payString = String()
+        
+        if meals != 0{
+            payString.appendContentsOf("Meals: \(meals) ")
+        }
+        if meals != 0 && dining != nil{
+            payString.appendContentsOf("\n")
+        }
+        if dining != nil{
+            payString.appendContentsOf("Dining: $\(dining)")
+        }
+        
+        return payString
+    }
 }

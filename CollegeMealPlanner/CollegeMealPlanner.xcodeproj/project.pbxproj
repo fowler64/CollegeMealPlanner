@@ -15,7 +15,8 @@
 		9327AB4C1D4BCA1F00AE7A62 /* CollegeMealPlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9327AB4B1D4BCA1F00AE7A62 /* CollegeMealPlannerTests.swift */; };
 		93703DFF1D4C0AF400A030F9 /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93703DFE1D4C0AF400A030F9 /* MealViewController.swift */; };
 		93703E011D4C0B0400A030F9 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93703E001D4C0B0400A030F9 /* Meal.swift */; };
-		93D4AAF01D527DA200FDF43D /* MealHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D4AAEF1D527DA200FDF43D /* MealHistoryViewController.swift */; };
+		93803BA01D52860000B62BE1 /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93803B9F1D52860000B62BE1 /* MealTableViewCell.swift */; };
+		9392FAD81D550C9800D0EB2F /* MealHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9392FAD71D550C9800D0EB2F /* MealHistoryViewController.swift */; };
 		93D4AAF21D527E9000FDF43D /* MealList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D4AAF11D527E9000FDF43D /* MealList.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +43,8 @@
 		9327AB4D1D4BCA1F00AE7A62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93703DFE1D4C0AF400A030F9 /* MealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
 		93703E001D4C0B0400A030F9 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
-		93D4AAEF1D527DA200FDF43D /* MealHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealHistoryViewController.swift; sourceTree = "<group>"; };
+		93803B9F1D52860000B62BE1 /* MealTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
+		9392FAD71D550C9800D0EB2F /* MealHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealHistoryViewController.swift; sourceTree = "<group>"; };
 		93D4AAF11D527E9000FDF43D /* MealList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,12 +90,13 @@
 				9327AB361D4BCA1E00AE7A62 /* AppDelegate.swift */,
 				9327AB381D4BCA1E00AE7A62 /* ViewController.swift */,
 				9327AB3A1D4BCA1E00AE7A62 /* Main.storyboard */,
+				93803B9F1D52860000B62BE1 /* MealTableViewCell.swift */,
+				9392FAD71D550C9800D0EB2F /* MealHistoryViewController.swift */,
 				93703DFE1D4C0AF400A030F9 /* MealViewController.swift */,
 				93703E001D4C0B0400A030F9 /* Meal.swift */,
 				9327AB3D1D4BCA1E00AE7A62 /* Assets.xcassets */,
 				9327AB3F1D4BCA1E00AE7A62 /* LaunchScreen.storyboard */,
 				9327AB421D4BCA1E00AE7A62 /* Info.plist */,
-				93D4AAEF1D527DA200FDF43D /* MealHistoryViewController.swift */,
 				93D4AAF11D527E9000FDF43D /* MealList.swift */,
 			);
 			path = CollegeMealPlanner;
@@ -211,10 +214,11 @@
 			files = (
 				93703E011D4C0B0400A030F9 /* Meal.swift in Sources */,
 				9327AB391D4BCA1E00AE7A62 /* ViewController.swift in Sources */,
+				93803BA01D52860000B62BE1 /* MealTableViewCell.swift in Sources */,
 				93D4AAF21D527E9000FDF43D /* MealList.swift in Sources */,
-				93D4AAF01D527DA200FDF43D /* MealHistoryViewController.swift in Sources */,
 				9327AB371D4BCA1E00AE7A62 /* AppDelegate.swift in Sources */,
 				93703DFF1D4C0AF400A030F9 /* MealViewController.swift in Sources */,
+				9392FAD81D550C9800D0EB2F /* MealHistoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,7 +297,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -332,7 +336,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

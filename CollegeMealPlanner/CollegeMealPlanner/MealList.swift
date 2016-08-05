@@ -25,4 +25,11 @@ class MealList{
     func saveMeals(){
         
     }
+    
+    func getMeals() -> [Meal]?{
+        if meals == nil{
+            populateMeals()
+        }
+        return meals
+    }
 }
