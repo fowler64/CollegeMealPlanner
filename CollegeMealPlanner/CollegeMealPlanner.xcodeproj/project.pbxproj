@@ -66,6 +66,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		932786A11D62866900F43C6E /* MainScene */ = {
+			isa = PBXGroup;
+			children = (
+				9327AB381D4BCA1E00AE7A62 /* ViewController.swift */,
+				93D4AAF11D527E9000FDF43D /* MealList.swift */,
+			);
+			name = MainScene;
+			sourceTree = "<group>";
+		};
+		932786A21D6286A300F43C6E /* MealHistoryScene */ = {
+			isa = PBXGroup;
+			children = (
+				9392FAD71D550C9800D0EB2F /* MealHistoryViewController.swift */,
+				93803B9F1D52860000B62BE1 /* MealTableViewCell.swift */,
+			);
+			name = MealHistoryScene;
+			sourceTree = "<group>";
+		};
+		932786A31D6286CD00F43C6E /* AddMealScene */ = {
+			isa = PBXGroup;
+			children = (
+				93703DFE1D4C0AF400A030F9 /* MealViewController.swift */,
+				93703E001D4C0B0400A030F9 /* Meal.swift */,
+			);
+			name = AddMealScene;
+			sourceTree = "<group>";
+		};
 		9327AB2A1D4BCA1E00AE7A62 = {
 			isa = PBXGroup;
 			children = (
@@ -88,16 +115,13 @@
 			isa = PBXGroup;
 			children = (
 				9327AB361D4BCA1E00AE7A62 /* AppDelegate.swift */,
-				9327AB381D4BCA1E00AE7A62 /* ViewController.swift */,
 				9327AB3A1D4BCA1E00AE7A62 /* Main.storyboard */,
-				93803B9F1D52860000B62BE1 /* MealTableViewCell.swift */,
-				9392FAD71D550C9800D0EB2F /* MealHistoryViewController.swift */,
-				93703DFE1D4C0AF400A030F9 /* MealViewController.swift */,
-				93703E001D4C0B0400A030F9 /* Meal.swift */,
 				9327AB3D1D4BCA1E00AE7A62 /* Assets.xcassets */,
 				9327AB3F1D4BCA1E00AE7A62 /* LaunchScreen.storyboard */,
 				9327AB421D4BCA1E00AE7A62 /* Info.plist */,
-				93D4AAF11D527E9000FDF43D /* MealList.swift */,
+				932786A11D62866900F43C6E /* MainScene */,
+				932786A21D6286A300F43C6E /* MealHistoryScene */,
+				932786A31D6286CD00F43C6E /* AddMealScene */,
 			);
 			path = CollegeMealPlanner;
 			sourceTree = "<group>";

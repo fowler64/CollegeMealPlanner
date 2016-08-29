@@ -25,7 +25,9 @@ class Meal {
     
     init(meals: Int, dining: Double?, restaurant: String?){
         self.meals = meals
-        self.restaurant = restaurant
+        if restaurant != nil{
+            self.restaurant = " \(restaurant!)"
+        }
         if dining != nil{
             self.dining = Int(dining! * 100)
         }
@@ -71,7 +73,7 @@ class Meal {
             payString.appendContentsOf("\n")
         }
         if dining != nil{
-            payString.appendContentsOf("Dining: $\(dining)")
+            payString.appendContentsOf("Dining: $\(Double(dining!) / 100)")
         }
         
         return payString

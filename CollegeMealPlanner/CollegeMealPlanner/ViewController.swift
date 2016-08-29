@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let mealList = MealList()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,6 +23,7 @@ class ViewController: UIViewController {
     }
     
     func addMeal(meal: Meal){
+        mealList.addMeal(meal)
         print("added meal into viewcontroller with \(meal.meals) \(meal.dining) \(meal.restaurant)")
     }
 
@@ -31,6 +34,10 @@ class ViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let myController = segue.destinationViewController as? MealViewController {
             myController.last = self
+        }
+        if let myController = segue.destinationViewController as? MealHistoryViewController {
+            print("going to history")
+            myController.setMealList(mealList)
         }
     }
 

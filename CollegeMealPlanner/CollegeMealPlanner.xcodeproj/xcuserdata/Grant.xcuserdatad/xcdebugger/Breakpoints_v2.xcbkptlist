@@ -17,6 +17,53 @@
             endingLineNumber = "19"
             landmarkName = "MealViewController"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CollegeMealPlanner.MealViewController.last.setter : Swift.Optional&lt;CollegeMealPlanner.ViewController&gt;"
+                  moduleName = "CollegeMealPlanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Grant/Documents/CodeRepos/collegemealplanner/CollegeMealPlanner/CollegeMealPlanner/MealViewController.swift"
+                  timestampString = "492996710.389421"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "65">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CollegeMealPlanner.MealViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; CollegeMealPlanner.MealViewController"
+                  moduleName = "CollegeMealPlanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Grant/Documents/CodeRepos/collegemealplanner/CollegeMealPlanner/CollegeMealPlanner/MealViewController.swift"
+                  timestampString = "492996710.389664"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "277">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CollegeMealPlanner.MealViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;CollegeMealPlanner.MealViewController&gt;"
+                  moduleName = "CollegeMealPlanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Grant/Documents/CodeRepos/collegemealplanner/CollegeMealPlanner/CollegeMealPlanner/MealViewController.swift"
+                  timestampString = "492996710.389924"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "188">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -25,13 +72,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CollegeMealPlanner/MealHistoryViewController.swift"
-            timestampString = "492114429.826376"
+            filePath = "CollegeMealPlanner/MealList.swift"
+            timestampString = "492995987.424263"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "init()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

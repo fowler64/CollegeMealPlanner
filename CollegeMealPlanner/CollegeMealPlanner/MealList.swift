@@ -9,27 +9,30 @@
 import Foundation
 
 class MealList{
-    var meals: [Meal]?
+    var meals = [Meal]()
     init(){
+        populateMeals()
     }
     
     func populateMeals(){
         
     }
     
-    func addMeal(toBeAdded: Meal){
-        populateMeals()
-        meals?.append(toBeAdded)
-    }
-    
     func saveMeals(){
         
     }
     
-    func getMeals() -> [Meal]?{
-        if meals == nil{
-            populateMeals()
-        }
+    func addMeal(toBeAdded: Meal){
+        populateMeals()
+        meals.append(toBeAdded)
+        saveMeals()
+    }
+    
+    func getMeals() -> [Meal]{
         return meals
+    }
+    
+    func setMeals(meals: [Meal]){
+        self.meals = meals
     }
 }
