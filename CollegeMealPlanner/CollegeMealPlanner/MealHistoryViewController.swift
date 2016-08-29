@@ -33,7 +33,7 @@ class MealHistoryViewController: UITableViewController {
     func setMealList(mealList: MealList){
         self.mealList = mealList
         //setUpTestMeals()
-        meals = self.mealList.getMeals()
+        meals = self.mealList.getMeals().reverse()
         print("mealList set")
     }
     
