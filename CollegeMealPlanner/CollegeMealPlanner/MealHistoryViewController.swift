@@ -32,8 +32,8 @@ class MealHistoryViewController: UITableViewController {
     
     func setMealList(mealList: MealList){
         self.mealList = mealList
-        setUpTestMeals()
-        //meals = self.mealList.getMeals()
+        //setUpTestMeals()
+        meals = self.mealList.getMeals()
         print("mealList set")
     }
     
@@ -90,7 +90,7 @@ class MealHistoryViewController: UITableViewController {
      override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
      if editingStyle == .Delete {
      // Delete the row from the data source
-        meals.removeAtIndex(indexPath.row)
+        mealList.removeMeal(meals.removeAtIndex(indexPath.row))
         mealList.setMeals(meals)
      tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
      } else if editingStyle == .Insert {
