@@ -9,20 +9,32 @@
 import Foundation
 
 class MealList{
+    
+    let defaults = NSUserDefaults.standardUserDefaults()
+    
+    var defaultsKey = "MealList.Money"
+    
     var dining = 50000
     var swipes = 20
     var meals = [Meal]()
     init(){
         print("new meal list created")
         populateMeals()
-    }
-    
-    func populateMeals(){
         establishMoney()
     }
     
+    func populateMeals(){
+    }
+    
     func establishMoney(){
-
+        var keptValues = defaults.objectForKey(defaultsKey) as? [Int] ?? [0,0]
+        dining = keptValues[0]
+        swipes = keptValues[1]
+        print("Dining: \(convertDining()) Meal: \(swipes)")
+    }
+    
+    func saveMoney(){
+        defaults.setObject([dining, swipes], forKey: defaultsKey)
     }
     
     func saveMeals(){
@@ -47,7 +59,7 @@ class MealList{
                 add = true
                 dining -= toBeAdded.dining!
                 
-                print("dining changed to \(changeDining())")
+                print("dining changed to \(convertDining())")
             }
         }
         
@@ -55,15 +67,18 @@ class MealList{
             populateMeals()
             meals.append(toBeAdded)
             saveMeals()
+            saveMoney()
         }
     }
     
     func removeMeal(toBeRemoved: Meal){
         if (toBeRemoved.dining != nil){
             dining += toBeRemoved.dining!
+            saveMoney()
         }
         if (toBeRemoved.meals != 0){
             swipes += toBeRemoved.meals
+            saveMoney()
         }
     }
     
@@ -75,7 +90,7 @@ class MealList{
         self.meals = meals
     }
     
-    func changeDining() -> Double{
+    func convertDining() -> Double{
         return Double(dining) / 100
     }
 }
