@@ -11,8 +11,7 @@ import Foundation
 class MealList{
     
     let defaults = NSUserDefaults.standardUserDefaults()
-    
-    var defaultsKey = "MealList.Money"
+    let defaultsKey = "MealList.Money"
     
     var dining = 50000
     var swipes = 20

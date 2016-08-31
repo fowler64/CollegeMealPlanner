@@ -9,12 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var DiningLabel: UILabel!
+    @IBOutlet weak var MealLabel: UILabel!
+    
+    let defaults = NSUserDefaults.standardUserDefaults()
+    let defaultsKey = "MealList.Money"
 
     let mealList = MealList()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        updateLabels()
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,6 +45,15 @@ class ViewController: UIViewController {
             print("going to history")
             myController.setMealList(mealList)
         }
+    }
+    
+    func updateLabels(){
+        var keptValues = defaults.objectForKey(defaultsKey) as? [Int] ?? [0,0]
+        let dining = keptValues[0]
+        let swipes = keptValues[1]
+        
+        MealLabel.text = swipes.description
+        DiningLabel.text = "$\(String(Double(dining)/100))"
     }
 
 }

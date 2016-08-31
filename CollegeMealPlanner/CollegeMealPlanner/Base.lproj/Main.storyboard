@@ -3,10 +3,94 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Settings View Controller-->
+        <scene sceneID="odm-AJ-YG5">
+            <objects>
+                <viewController id="3dr-1A-DQG" customClass="SettingsViewController" customModule="CollegeMealPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="29R-sz-xTK"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ki9-rT-R38"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eGw-GI-NkD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Meal Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Yod-M5-9Kh">
+                                <rect key="frame" x="20" y="72" width="560" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="C5t-V1-MPs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OT7-ep-OnT">
+                                <rect key="frame" x="252" y="130" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="cfe-M2-FTb"/>
+                                    <constraint firstAttribute="width" constant="97" id="xl4-XD-KEM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$0.00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NTC-X7-MCz">
+                                <rect key="frame" x="252" y="226" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="X4E-kQ-D3N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ovc-cE-95t">
+                                <rect key="frame" x="20" y="264" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="zmz-AW-LNg"/>
+                                </constraints>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="SaveButtonPressed:" destination="3dr-1A-DQG" eventType="touchUpInside" id="XOs-rk-yON"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Dining Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="G7t-fo-m5p">
+                                <rect key="frame" x="20" y="168" width="560" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Yod-M5-9Kh" firstAttribute="leading" secondItem="G7t-fo-m5p" secondAttribute="leading" id="3Al-vp-kNc"/>
+                            <constraint firstItem="OT7-ep-OnT" firstAttribute="leading" secondItem="NTC-X7-MCz" secondAttribute="leading" id="3PM-u3-C4d"/>
+                            <constraint firstItem="G7t-fo-m5p" firstAttribute="centerX" secondItem="Yod-M5-9Kh" secondAttribute="centerX" id="QuF-9B-1kG"/>
+                            <constraint firstItem="Yod-M5-9Kh" firstAttribute="top" secondItem="29R-sz-xTK" secondAttribute="bottom" constant="8" id="TSJ-1x-eIK"/>
+                            <constraint firstItem="OT7-ep-OnT" firstAttribute="centerX" secondItem="Yod-M5-9Kh" secondAttribute="centerX" id="ak6-BA-2eF"/>
+                            <constraint firstItem="NTC-X7-MCz" firstAttribute="top" secondItem="G7t-fo-m5p" secondAttribute="bottom" constant="8" id="ehi-1V-0mJ"/>
+                            <constraint firstItem="OT7-ep-OnT" firstAttribute="top" secondItem="Yod-M5-9Kh" secondAttribute="bottom" constant="8" id="lw0-GK-iJw"/>
+                            <constraint firstItem="Ovc-cE-95t" firstAttribute="top" secondItem="NTC-X7-MCz" secondAttribute="bottom" constant="8" id="ndJ-pK-OxV"/>
+                            <constraint firstItem="G7t-fo-m5p" firstAttribute="top" secondItem="OT7-ep-OnT" secondAttribute="bottom" constant="8" id="ns1-VW-G3r"/>
+                            <constraint firstItem="G7t-fo-m5p" firstAttribute="leading" secondItem="Ovc-cE-95t" secondAttribute="leading" id="oAf-vY-P4w"/>
+                            <constraint firstItem="Ovc-cE-95t" firstAttribute="centerX" secondItem="Yod-M5-9Kh" secondAttribute="centerX" id="p2G-du-WJk"/>
+                            <constraint firstItem="Ki9-rT-R38" firstAttribute="top" secondItem="Ovc-cE-95t" secondAttribute="bottom" constant="306" id="tWM-1D-lte"/>
+                            <constraint firstItem="NTC-X7-MCz" firstAttribute="centerX" secondItem="Yod-M5-9Kh" secondAttribute="centerX" id="x0G-Ww-vMS"/>
+                            <constraint firstItem="Yod-M5-9Kh" firstAttribute="leading" secondItem="eGw-GI-NkD" secondAttribute="leadingMargin" id="xuD-Ad-iW2"/>
+                            <constraint firstItem="Yod-M5-9Kh" firstAttribute="trailing" secondItem="eGw-GI-NkD" secondAttribute="trailingMargin" id="yWk-NH-IeZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="DiningField" destination="NTC-X7-MCz" id="jMg-Th-2CG"/>
+                        <outlet property="MealField" destination="OT7-ep-OnT" id="dEc-gx-ESm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XXV-8x-ZGr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1638" y="346"/>
+        </scene>
+        <!--Dining Info-->
         <scene sceneID="tNh-MC-HSj">
             <objects>
                 <viewController id="oYb-QG-bQT" customClass="ViewController" customModule="CollegeMealPlanner" sceneMemberID="viewController">
@@ -18,25 +102,89 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSb-4i-ei6">
-                                <rect key="frame" x="268" y="285" width="65" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSb-4i-ei6">
+                                <rect key="frame" x="268" y="353" width="65" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Qm6-9a-LBz"/>
+                                </constraints>
                                 <state key="normal" title="Add meal"/>
                                 <connections>
                                     <action selector="addMealButton:" destination="oYb-QG-bQT" eventType="touchUpInside" id="IIw-ux-NFU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAE-he-uCO">
-                                <rect key="frame" x="275" y="247" width="50" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dining" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="UsS-Nb-wNE">
+                                <rect key="frame" x="20" y="217" width="264" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Ewn-af-3Kq"/>
+                                    <constraint firstAttribute="width" constant="264" id="o2b-LC-dvb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="51"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="AGW-Ks-qEN">
+                                <rect key="frame" x="20" y="285" width="264" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meals" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="4Wv-as-VTf">
+                                <rect key="frame" x="316" y="217" width="264" height="60"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="51"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="hux-58-I9F">
+                                <rect key="frame" x="316" y="285" width="264" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4Wv-as-VTf" firstAttribute="leading" secondItem="hux-58-I9F" secondAttribute="leading" id="0hm-1O-pTz"/>
+                            <constraint firstItem="UsS-Nb-wNE" firstAttribute="baseline" secondItem="4Wv-as-VTf" secondAttribute="baseline" id="3um-qn-lby"/>
+                            <constraint firstItem="DSb-4i-ei6" firstAttribute="centerX" secondItem="j9f-oP-Iqp" secondAttribute="centerX" id="7Q8-Dv-nyx"/>
+                            <constraint firstItem="4Wv-as-VTf" firstAttribute="trailing" secondItem="j9f-oP-Iqp" secondAttribute="trailingMargin" id="8cs-73-4oK"/>
+                            <constraint firstItem="UsS-Nb-wNE" firstAttribute="leading" secondItem="j9f-oP-Iqp" secondAttribute="leadingMargin" id="91s-Da-AMS"/>
+                            <constraint firstItem="4Wv-as-VTf" firstAttribute="trailing" secondItem="hux-58-I9F" secondAttribute="trailing" id="FZn-AJ-UPZ"/>
+                            <constraint firstItem="AGW-Ks-qEN" firstAttribute="baseline" secondItem="hux-58-I9F" secondAttribute="baseline" id="KF4-fC-MZ1"/>
+                            <constraint firstItem="4Wv-as-VTf" firstAttribute="width" secondItem="UsS-Nb-wNE" secondAttribute="width" id="NDr-M1-3rD"/>
+                            <constraint firstItem="hux-58-I9F" firstAttribute="height" secondItem="AGW-Ks-qEN" secondAttribute="height" id="Sdu-DJ-KLB"/>
+                            <constraint firstItem="UsS-Nb-wNE" firstAttribute="firstBaseline" secondItem="4Wv-as-VTf" secondAttribute="firstBaseline" id="VgF-8I-fk3"/>
+                            <constraint firstItem="UsS-Nb-wNE" firstAttribute="trailing" secondItem="AGW-Ks-qEN" secondAttribute="trailing" id="XHm-z2-iiJ"/>
+                            <constraint firstItem="AGW-Ks-qEN" firstAttribute="top" secondItem="UsS-Nb-wNE" secondAttribute="bottom" constant="8" symbolic="YES" id="aM1-aD-P4w"/>
+                            <constraint firstItem="hux-58-I9F" firstAttribute="width" secondItem="AGW-Ks-qEN" secondAttribute="width" id="b27-MD-QA8"/>
+                            <constraint firstItem="4Wv-as-VTf" firstAttribute="height" secondItem="UsS-Nb-wNE" secondAttribute="height" id="fMW-7b-tRr"/>
+                            <constraint firstItem="UsS-Nb-wNE" firstAttribute="top" secondItem="nDl-vB-Aaw" secondAttribute="bottom" constant="153" id="gDM-hp-RKB"/>
+                            <constraint firstItem="DSb-4i-ei6" firstAttribute="top" secondItem="AGW-Ks-qEN" secondAttribute="bottom" constant="8" symbolic="YES" id="kW6-1w-NJb"/>
+                            <constraint firstItem="Z44-Ti-Ar0" firstAttribute="top" secondItem="DSb-4i-ei6" secondAttribute="bottom" constant="217" id="mgQ-1A-9aD"/>
+                            <constraint firstItem="UsS-Nb-wNE" firstAttribute="leading" secondItem="AGW-Ks-qEN" secondAttribute="leading" id="tlD-hW-8me"/>
+                            <constraint firstItem="AGW-Ks-qEN" firstAttribute="firstBaseline" secondItem="hux-58-I9F" secondAttribute="firstBaseline" id="vUx-yV-lP9"/>
+                            <constraint firstItem="4Wv-as-VTf" firstAttribute="leading" secondItem="UsS-Nb-wNE" secondAttribute="trailing" constant="32" id="vWb-oI-spK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Dining Info" id="AKX-QG-gJz">
+                        <barButtonItem key="leftBarButtonItem" title="Settings" id="rme-Dl-Phh">
+                            <connections>
+                                <segue destination="3dr-1A-DQG" kind="show" id="251-qu-aLx"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="History" id="GEi-cW-U9O">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UAE-he-uCO">
+                                <rect key="frame" x="530" y="7" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="History"/>
                                 <connections>
                                     <segue destination="U57-Np-CY5" kind="show" id="QLr-rM-wbP"/>
                                 </connections>
                             </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="AKX-QG-gJz"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="DiningLabel" destination="AGW-Ks-qEN" id="baJ-qf-DWl"/>
+                        <outlet property="MealLabel" destination="hux-58-I9F" id="cA6-ER-6Lt"/>
                         <segue destination="fHR-ks-uAW" kind="show" identifier="addMealSegue" id="3Ki-Ug-28b"/>
                     </connections>
                 </viewController>
@@ -113,7 +261,7 @@
             </objects>
             <point key="canvasLocation" x="2342" y="1104"/>
         </scene>
-        <!--Meal View Controller-->
+        <!--Add Meal-->
         <scene sceneID="Inx-7A-b2a">
             <objects>
                 <viewController id="fHR-ks-uAW" customClass="MealViewController" customModule="CollegeMealPlanner" customModuleProvider="target" sceneMemberID="viewController">
@@ -184,7 +332,7 @@
                             <constraint firstItem="2mk-bn-dam" firstAttribute="trailing" secondItem="Qwz-b3-N12" secondAttribute="trailing" id="vgE-hY-6e5"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Vg4-E3-Gmq"/>
+                    <navigationItem key="navigationItem" title="Add Meal" id="Vg4-E3-Gmq"/>
                     <connections>
                         <outlet property="diningText" destination="2mk-bn-dam" id="PTC-ge-TgM"/>
                         <outlet property="mealCounter" destination="Hky-r1-cG1" id="Ile-OT-s2n"/>

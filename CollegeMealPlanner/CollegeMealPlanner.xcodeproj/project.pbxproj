@@ -13,10 +13,12 @@
 		9327AB3E1D4BCA1E00AE7A62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9327AB3D1D4BCA1E00AE7A62 /* Assets.xcassets */; };
 		9327AB411D4BCA1E00AE7A62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9327AB3F1D4BCA1E00AE7A62 /* LaunchScreen.storyboard */; };
 		9327AB4C1D4BCA1F00AE7A62 /* CollegeMealPlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9327AB4B1D4BCA1F00AE7A62 /* CollegeMealPlannerTests.swift */; };
+		93527BE21D7756C500B41876 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93527BE11D7756C500B41876 /* SettingsViewController.swift */; };
 		93703DFF1D4C0AF400A030F9 /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93703DFE1D4C0AF400A030F9 /* MealViewController.swift */; };
 		93703E011D4C0B0400A030F9 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93703E001D4C0B0400A030F9 /* Meal.swift */; };
 		93803BA01D52860000B62BE1 /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93803B9F1D52860000B62BE1 /* MealTableViewCell.swift */; };
 		9392FAD81D550C9800D0EB2F /* MealHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9392FAD71D550C9800D0EB2F /* MealHistoryViewController.swift */; };
+		93AEAE781D77513700A5276D /* SettingsBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AEAE771D77513700A5276D /* SettingsBrain.swift */; };
 		93D4AAF21D527E9000FDF43D /* MealList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D4AAF11D527E9000FDF43D /* MealList.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,10 +43,12 @@
 		9327AB471D4BCA1F00AE7A62 /* CollegeMealPlannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollegeMealPlannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9327AB4B1D4BCA1F00AE7A62 /* CollegeMealPlannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeMealPlannerTests.swift; sourceTree = "<group>"; };
 		9327AB4D1D4BCA1F00AE7A62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93527BE11D7756C500B41876 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		93703DFE1D4C0AF400A030F9 /* MealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
 		93703E001D4C0B0400A030F9 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		93803B9F1D52860000B62BE1 /* MealTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
 		9392FAD71D550C9800D0EB2F /* MealHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealHistoryViewController.swift; sourceTree = "<group>"; };
+		93AEAE771D77513700A5276D /* SettingsBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsBrain.swift; sourceTree = "<group>"; };
 		93D4AAF11D527E9000FDF43D /* MealList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,6 +123,7 @@
 				9327AB3D1D4BCA1E00AE7A62 /* Assets.xcassets */,
 				9327AB3F1D4BCA1E00AE7A62 /* LaunchScreen.storyboard */,
 				9327AB421D4BCA1E00AE7A62 /* Info.plist */,
+				9343238D1D772E0C0013843A /* SettingsScene */,
 				932786A11D62866900F43C6E /* MainScene */,
 				932786A21D6286A300F43C6E /* MealHistoryScene */,
 				932786A31D6286CD00F43C6E /* AddMealScene */,
@@ -133,6 +138,15 @@
 				9327AB4D1D4BCA1F00AE7A62 /* Info.plist */,
 			);
 			path = CollegeMealPlannerTests;
+			sourceTree = "<group>";
+		};
+		9343238D1D772E0C0013843A /* SettingsScene */ = {
+			isa = PBXGroup;
+			children = (
+				93527BE11D7756C500B41876 /* SettingsViewController.swift */,
+				93AEAE771D77513700A5276D /* SettingsBrain.swift */,
+			);
+			name = SettingsScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,7 +256,9 @@
 				93D4AAF21D527E9000FDF43D /* MealList.swift in Sources */,
 				9327AB371D4BCA1E00AE7A62 /* AppDelegate.swift in Sources */,
 				93703DFF1D4C0AF400A030F9 /* MealViewController.swift in Sources */,
+				93AEAE781D77513700A5276D /* SettingsBrain.swift in Sources */,
 				9392FAD81D550C9800D0EB2F /* MealHistoryViewController.swift in Sources */,
+				93527BE21D7756C500B41876 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
