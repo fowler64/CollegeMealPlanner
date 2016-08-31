@@ -49,7 +49,7 @@ class Meal: NSObject, NSCoding {
         if dining == 0{
             self.init(meals: meals, dining: nil, restaurant: restaurant)
         }else{
-            self.init(meals: meals, dining: Double(dining), restaurant: restaurant)
+            self.init(meals: meals, dining: Double(dining)/100, restaurant: restaurant)
         }
         
         // after init set dates to what they should be

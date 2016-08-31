@@ -24,6 +24,9 @@ class MealList{
     }
     
     func populateMeals(){
+        if let savedMeals = loadMeals() {
+            meals += savedMeals
+        }
     }
     
     func establishMoney(){
@@ -37,9 +40,6 @@ class MealList{
         defaults.setObject([dining, swipes], forKey: defaultsKey)
     }
     
-    func saveMeals(){
-        
-    }
     
     func addMeal(toBeAdded: Meal){
         
@@ -64,7 +64,6 @@ class MealList{
         }
         
         if add{
-            populateMeals()
             meals.append(toBeAdded)
             saveMeals()
             saveMoney()
@@ -88,9 +87,22 @@ class MealList{
     
     func setMeals(meals: [Meal]){
         self.meals = meals
+        saveMeals()
     }
     
     func convertDining() -> Double{
         return Double(dining) / 100
+    }
+    
+    // MARK: NSCoding
+    func saveMeals() {
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(meals, toFile: Meal.ArchiveURL.path!)
+        if !isSuccessfulSave {
+            print("Failed to save meals...")
+        }
+    }
+    
+    func loadMeals() -> [Meal]? {
+        return NSKeyedUnarchiver.unarchiveObjectWithFile(Meal.ArchiveURL.path!) as? [Meal]
     }
 }

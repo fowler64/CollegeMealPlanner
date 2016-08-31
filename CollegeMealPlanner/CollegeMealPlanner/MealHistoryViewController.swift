@@ -21,14 +21,14 @@ class MealHistoryViewController: UITableViewController {
         
         navigationItem.rightBarButtonItem = editButtonItem()
     }
-    
-    func setUpTestMeals(){
-        // Creates test meals
-        let meal1 = Meal(meals: 1, dining: nil, restaurant: "test Mewal")
-        let meal2 = Meal(meals: 0, dining: 14.9864, restaurant: "test Dining")
-        let meal3 = Meal(meals: 1, dining: 4.54, restaurant: nil)
-        meals += [meal1, meal2, meal3]
-    }
+//    
+//    func setUpTestMeals(){
+//        // Creates test meals
+//        let meal1 = Meal(meals: 1, dining: nil, restaurant: "test Mewal")
+//        let meal2 = Meal(meals: 0, dining: 14.9864, restaurant: "test Dining")
+//        let meal3 = Meal(meals: 1, dining: 4.54, restaurant: nil)
+//        meals += [meal1, meal2, meal3]
+//    }
     
     func setMealList(mealList: MealList){
         self.mealList = mealList
@@ -123,5 +123,7 @@ class MealHistoryViewController: UITableViewController {
      // Pass the selected object to the new view controller.
      }
      */
+    
+
     
 }
