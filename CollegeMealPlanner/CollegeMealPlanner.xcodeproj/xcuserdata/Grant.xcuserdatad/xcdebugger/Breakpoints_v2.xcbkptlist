@@ -26,7 +26,7 @@
                   moduleName = "CollegeMealPlanner"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Grant/Documents/CodeRepos/collegemealplanner/CollegeMealPlanner/CollegeMealPlanner/MealViewController.swift"
-                  timestampString = "492996710.389421"
+                  timestampString = "494346953.748895"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "20"
@@ -41,7 +41,7 @@
                   moduleName = "CollegeMealPlanner"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Grant/Documents/CodeRepos/collegemealplanner/CollegeMealPlanner/CollegeMealPlanner/MealViewController.swift"
-                  timestampString = "492996710.389664"
+                  timestampString = "494346953.749064"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "20"
@@ -56,7 +56,7 @@
                   moduleName = "CollegeMealPlanner"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Grant/Documents/CodeRepos/collegemealplanner/CollegeMealPlanner/CollegeMealPlanner/MealViewController.swift"
-                  timestampString = "492996710.389924"
+                  timestampString = "494346953.749207"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "20"
@@ -79,6 +79,22 @@
             startingLineNumber = "22"
             endingLineNumber = "22"
             landmarkName = "init()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CollegeMealPlanner/Meal.swift"
+            timestampString = "494346952.473925"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "init(coder:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

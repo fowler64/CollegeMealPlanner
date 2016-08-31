@@ -9,21 +9,69 @@
 import Foundation
 
 struct Keys {
-    static let name = "nameKey"
-    static let meal = "mealKey"
+    static let meals = "mealKey"
+    static let dining = "diningKey"
     static let restaurant = "restaurantKey"
     static let dateComp = "dateComponentKey"
     static let date = "dateKey"
 }
 
-class Meal {
-    var meals: Int
+
+class Meal: NSObject, NSCoding {
+    var meals: Int = 0
     var dining: Int?
     var restaurant: String?
     var dateComp = NSDateComponents()
     var date = NSDate()
     
+    // for saving and restore
+    static let DocumentsDirectory = NSFileManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
+    static let ArchiveURL = DocumentsDirectory.URLByAppendingPathComponent("meals")
+    
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeInteger(meals, forKey: Keys.meals)
+        if (dining != nil){
+            aCoder.encodeInteger(dining!, forKey: Keys.dining)
+        }else{
+            aCoder.encodeInteger(0, forKey: Keys.dining)
+        }
+        aCoder.encodeObject(restaurant, forKey: Keys.restaurant)
+        aCoder.encodeObject(dateComp, forKey: Keys.dateComp)
+        aCoder.encodeObject(date, forKey: Keys.date)
+    }
+    
+    // if there is data to reload itll reload it
+    required convenience init?(coder aDecoder: NSCoder) {
+        let restaurant = aDecoder.decodeObjectForKey(Keys.restaurant) as? String
+        let meals = aDecoder.decodeIntegerForKey(Keys.meals)
+        let dining = aDecoder.decodeIntegerForKey(Keys.dining)
+        if dining == 0{
+            self.init(meals: meals, dining: nil, restaurant: restaurant)
+        }else{
+            self.init(meals: meals, dining: Double(dining), restaurant: restaurant)
+        }
+        
+        // after init set dates to what they should be
+        dateComp = aDecoder.decodeObjectForKey(Keys.dateComp) as! NSDateComponents
+        date = aDecoder.decodeObjectForKey(Keys.date) as! NSDate
+    }
+    
     init(meals: Int, dining: Double?, restaurant: String?){
+        self.meals = meals
+        if restaurant != nil{
+            self.restaurant = " \(restaurant!)"
+        }
+        if dining != nil{
+            self.dining = Int(dining! * 100)
+        }
+        print("created new meal with values \(self.meals) \(self.dining) \(self.restaurant)")
+        print("on " + date.description)
+        
+        super.init()
+    }
+    
+    func setValues(meals: Int, dining: Double?, restaurant: String?){
         self.meals = meals
         if restaurant != nil{
             self.restaurant = " \(restaurant!)"
