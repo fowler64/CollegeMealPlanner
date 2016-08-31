@@ -12,6 +12,7 @@ class MealHistoryViewController: UITableViewController {
     // MARK: Properties
     var mealList = MealList()
     var meals: [Meal] = [Meal]()
+    var last: ViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,14 +22,6 @@ class MealHistoryViewController: UITableViewController {
         
         navigationItem.rightBarButtonItem = editButtonItem()
     }
-//    
-//    func setUpTestMeals(){
-//        // Creates test meals
-//        let meal1 = Meal(meals: 1, dining: nil, restaurant: "test Mewal")
-//        let meal2 = Meal(meals: 0, dining: 14.9864, restaurant: "test Dining")
-//        let meal3 = Meal(meals: 1, dining: 4.54, restaurant: nil)
-//        meals += [meal1, meal2, meal3]
-//    }
     
     func setMealList(mealList: MealList){
         self.mealList = mealList
@@ -92,6 +85,7 @@ class MealHistoryViewController: UITableViewController {
      // Delete the row from the data source
         mealList.removeMeal(meals.removeAtIndex(indexPath.row))
         mealList.setMeals(meals)
+        last?.updateLabels()
      tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
      } else if editingStyle == .Insert {
      // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view

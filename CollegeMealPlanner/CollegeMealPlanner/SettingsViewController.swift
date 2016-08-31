@@ -14,6 +14,8 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var MealField: UITextField!
     @IBOutlet weak var DiningField: UITextField!
     
+    var last: ViewController?
+    
     let defaults = NSUserDefaults.standardUserDefaults()
     let defaultsKey = "MealList.Money"
 
@@ -36,6 +38,7 @@ class SettingsViewController: UIViewController {
         
         defaults.setObject([dining, meal], forKey: defaultsKey)
         print("saved dining: \(dining) meals: \(meal)")
+        last?.updateLabels()
         
         navigationController?.popViewControllerAnimated(true)
     }

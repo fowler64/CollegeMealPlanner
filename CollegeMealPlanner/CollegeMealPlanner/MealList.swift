@@ -42,6 +42,8 @@ class MealList{
     
     func addMeal(toBeAdded: Meal){
         
+        establishMoney()
+        
         // change overall meal and dining number
         // and only add meal if it can be bought
         var add = false
@@ -70,14 +72,16 @@ class MealList{
     }
     
     func removeMeal(toBeRemoved: Meal){
+        
+        establishMoney()
+        
         if (toBeRemoved.dining != nil){
             dining += toBeRemoved.dining!
-            saveMoney()
         }
         if (toBeRemoved.meals != 0){
             swipes += toBeRemoved.meals
-            saveMoney()
         }
+        saveMoney()
     }
     
     func getMeals() -> [Meal]{

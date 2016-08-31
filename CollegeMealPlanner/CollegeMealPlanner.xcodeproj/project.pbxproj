@@ -18,7 +18,6 @@
 		93703E011D4C0B0400A030F9 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93703E001D4C0B0400A030F9 /* Meal.swift */; };
 		93803BA01D52860000B62BE1 /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93803B9F1D52860000B62BE1 /* MealTableViewCell.swift */; };
 		9392FAD81D550C9800D0EB2F /* MealHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9392FAD71D550C9800D0EB2F /* MealHistoryViewController.swift */; };
-		93AEAE781D77513700A5276D /* SettingsBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AEAE771D77513700A5276D /* SettingsBrain.swift */; };
 		93D4AAF21D527E9000FDF43D /* MealList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D4AAF11D527E9000FDF43D /* MealList.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +47,6 @@
 		93703E001D4C0B0400A030F9 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		93803B9F1D52860000B62BE1 /* MealTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
 		9392FAD71D550C9800D0EB2F /* MealHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealHistoryViewController.swift; sourceTree = "<group>"; };
-		93AEAE771D77513700A5276D /* SettingsBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsBrain.swift; sourceTree = "<group>"; };
 		93D4AAF11D527E9000FDF43D /* MealList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,7 +142,6 @@
 			isa = PBXGroup;
 			children = (
 				93527BE11D7756C500B41876 /* SettingsViewController.swift */,
-				93AEAE771D77513700A5276D /* SettingsBrain.swift */,
 			);
 			name = SettingsScene;
 			sourceTree = "<group>";
@@ -256,7 +253,6 @@
 				93D4AAF21D527E9000FDF43D /* MealList.swift in Sources */,
 				9327AB371D4BCA1E00AE7A62 /* AppDelegate.swift in Sources */,
 				93703DFF1D4C0AF400A030F9 /* MealViewController.swift in Sources */,
-				93AEAE781D77513700A5276D /* SettingsBrain.swift in Sources */,
 				9392FAD81D550C9800D0EB2F /* MealHistoryViewController.swift in Sources */,
 				93527BE21D7756C500B41876 /* SettingsViewController.swift in Sources */,
 			);

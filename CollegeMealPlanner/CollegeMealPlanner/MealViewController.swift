@@ -51,8 +51,11 @@ class MealViewController: UIViewController {
         if meals != 0 || dinings != nil{
             let meal = Meal(meals: meals, dining: dinings, restaurant: restaurantName)
             last?.addMeal(meal)
+            last?.updateLabels()
+            
             navigationController?.popViewControllerAnimated(true)
         }
+        
         
     }
     

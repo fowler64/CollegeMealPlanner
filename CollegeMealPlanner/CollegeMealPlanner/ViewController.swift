@@ -44,6 +44,10 @@ class ViewController: UIViewController {
         if let myController = segue.destinationViewController as? MealHistoryViewController {
             print("going to history")
             myController.setMealList(mealList)
+            myController.last = self
+        }
+        if let myController = segue.destinationViewController as? SettingsViewController {
+            myController.last = self
         }
     }
     
