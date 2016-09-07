@@ -4,10 +4,11 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Settings View Controller-->
+        <!--Settings-->
         <scene sceneID="odm-AJ-YG5">
             <objects>
                 <viewController id="3dr-1A-DQG" customClass="SettingsViewController" customModule="CollegeMealPlanner" customModuleProvider="target" sceneMemberID="viewController">
@@ -51,24 +52,11 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ovc-cE-95t">
-                                <rect key="frame" x="20" y="244" width="560" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="zmz-AW-LNg"/>
-                                </constraints>
-                                <state key="normal" title="Save"/>
-                                <connections>
-                                    <action selector="SaveButtonPressed:" destination="3dr-1A-DQG" eventType="touchUpInside" id="XOs-rk-yON"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Yod-M5-9Kh" firstAttribute="top" secondItem="29R-sz-xTK" secondAttribute="bottom" constant="8" symbolic="YES" id="2Xb-JC-aML"/>
-                            <constraint firstItem="Ovc-cE-95t" firstAttribute="top" secondItem="NTC-X7-MCz" secondAttribute="bottom" constant="8" symbolic="YES" id="3My-WB-N1S"/>
                             <constraint firstItem="OT7-ep-OnT" firstAttribute="leading" secondItem="NTC-X7-MCz" secondAttribute="leading" id="84E-2U-TCA"/>
-                            <constraint firstItem="G7t-fo-m5p" firstAttribute="trailing" secondItem="Ovc-cE-95t" secondAttribute="trailing" id="EFg-L5-Wab"/>
-                            <constraint firstItem="G7t-fo-m5p" firstAttribute="leading" secondItem="Ovc-cE-95t" secondAttribute="leading" id="RFg-Xy-wie"/>
                             <constraint firstItem="Yod-M5-9Kh" firstAttribute="trailing" secondItem="G7t-fo-m5p" secondAttribute="trailing" id="WUc-1U-A9g"/>
                             <constraint firstItem="OT7-ep-OnT" firstAttribute="top" secondItem="Yod-M5-9Kh" secondAttribute="bottom" constant="8" symbolic="YES" id="f1B-VD-Gid"/>
                             <constraint firstItem="Yod-M5-9Kh" firstAttribute="leading" secondItem="eGw-GI-NkD" secondAttribute="leadingMargin" id="fIZ-PO-mZc"/>
@@ -80,6 +68,27 @@
                             <constraint firstItem="NTC-X7-MCz" firstAttribute="top" secondItem="G7t-fo-m5p" secondAttribute="bottom" constant="8" symbolic="YES" id="xbe-P5-Vnr"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Settings" id="Aai-vh-Mpa">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="8Jp-nC-QxD">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ovc-cE-95t">
+                                <rect key="frame" x="529" y="7" width="51" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="zmz-AW-LNg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Save"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="zmz-AW-LNg"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="SaveButtonPressed:" destination="3dr-1A-DQG" eventType="touchUpInside" id="XOs-rk-yON"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="DiningField" destination="NTC-X7-MCz" id="jMg-Th-2CG"/>
                         <outlet property="MealField" destination="OT7-ep-OnT" id="dEc-gx-ESm"/>
@@ -87,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XXV-8x-ZGr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1638" y="346"/>
+            <point key="canvasLocation" x="2342" y="346"/>
         </scene>
         <!--Dining Info-->
         <scene sceneID="tNh-MC-HSj">
@@ -102,10 +111,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSb-4i-ei6">
-                                <rect key="frame" x="268" y="353" width="65" height="30"/>
+                                <rect key="frame" x="257.5" y="353" width="85" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Qm6-9a-LBz"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Add meal"/>
                                 <connections>
                                     <action selector="addMealButton:" destination="oYb-QG-bQT" eventType="touchUpInside" id="IIw-ux-NFU"/>
@@ -172,13 +182,14 @@
                     <navigationItem key="navigationItem" title="Dining Info" id="AKX-QG-gJz">
                         <barButtonItem key="leftBarButtonItem" title="Settings" id="rme-Dl-Phh">
                             <connections>
-                                <segue destination="3dr-1A-DQG" kind="show" id="251-qu-aLx"/>
+                                <segue destination="LlJ-1M-sOD" kind="show" id="251-qu-aLx"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="History" id="GEi-cW-U9O">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UAE-he-uCO">
                                 <rect key="frame" x="530" y="7" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="History"/>
                                 <connections>
                                     <segue destination="U57-Np-CY5" kind="show" id="QLr-rM-wbP"/>
@@ -304,6 +315,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vte-at-7J1">
                                 <rect key="frame" x="550" y="166" width="30" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="+"/>
                                 <connections>
                                     <action selector="addTax:" destination="fHR-ks-uAW" eventType="touchUpInside" id="IgT-1f-LO6"/>
@@ -312,9 +324,17 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1re-4z-039">
                                 <rect key="frame" x="20" y="166" width="30" height="30"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1D4-Yh-fuM"/>
+                                    <constraint firstAttribute="width" constant="30" id="bL4-GB-xlJ"/>
                                     <constraint firstAttribute="width" constant="30" id="h1k-MK-LSc"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="-"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="h1k-MK-LSc"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <action selector="subTax:" destination="fHR-ks-uAW" eventType="touchUpInside" id="O7q-ie-miA"/>
                                 </connections>
@@ -329,6 +349,7 @@
                         <constraints>
                             <constraint firstItem="1re-4z-039" firstAttribute="leading" secondItem="Qwz-b3-N12" secondAttribute="leading" id="282-p1-lpk"/>
                             <constraint firstItem="jct-hw-QCb" firstAttribute="leading" secondItem="1re-4z-039" secondAttribute="leading" id="3G2-dq-zll"/>
+                            <constraint firstItem="2mk-bn-dam" firstAttribute="top" secondItem="Vte-at-7J1" secondAttribute="top" id="47V-6z-d7e"/>
                             <constraint firstItem="2mk-bn-dam" firstAttribute="leading" secondItem="1re-4z-039" secondAttribute="trailing" constant="8" symbolic="YES" id="5ZG-0C-XAb"/>
                             <constraint firstItem="jct-hw-QCb" firstAttribute="centerX" secondItem="2mk-bn-dam" secondAttribute="centerX" id="8Rf-ze-X6E"/>
                             <constraint firstItem="Qwz-b3-N12" firstAttribute="top" secondItem="1re-4z-039" secondAttribute="bottom" constant="8" symbolic="YES" id="AMV-iy-9J1"/>
@@ -336,16 +357,39 @@
                             <constraint firstItem="zRU-wa-6KM" firstAttribute="leading" secondItem="jct-hw-QCb" secondAttribute="leading" id="Cgn-nm-B9J"/>
                             <constraint firstItem="jct-hw-QCb" firstAttribute="top" secondItem="Hky-r1-cG1" secondAttribute="bottom" constant="8" symbolic="YES" id="DWQ-jL-GXP"/>
                             <constraint firstItem="zRU-wa-6KM" firstAttribute="top" secondItem="x44-aZ-hMk" secondAttribute="bottom" constant="8" symbolic="YES" id="Lc4-Ao-WxP"/>
+                            <constraint firstItem="Qwz-b3-N12" firstAttribute="top" secondItem="1re-4z-039" secondAttribute="bottom" constant="8" symbolic="YES" id="Mq8-LB-e6r"/>
                             <constraint firstItem="zRU-wa-6KM" firstAttribute="trailing" secondItem="jct-hw-QCb" secondAttribute="trailing" id="Qfq-ur-Bzj"/>
                             <constraint firstItem="zRU-wa-6KM" firstAttribute="trailing" secondItem="e8I-Bc-cxE" secondAttribute="trailingMargin" id="RzL-Se-O0H"/>
                             <constraint firstItem="zRU-wa-6KM" firstAttribute="leading" secondItem="e8I-Bc-cxE" secondAttribute="leadingMargin" id="VrY-hq-zaG"/>
+                            <constraint firstItem="1re-4z-039" firstAttribute="leading" secondItem="Qwz-b3-N12" secondAttribute="leading" id="ZAZ-Tu-qKw"/>
+                            <constraint firstItem="1re-4z-039" firstAttribute="top" secondItem="2mk-bn-dam" secondAttribute="top" id="Zzg-1o-kAk"/>
+                            <constraint firstItem="1re-4z-039" firstAttribute="leading" secondItem="jct-hw-QCb" secondAttribute="leading" id="bNP-1k-syD"/>
+                            <constraint firstItem="1re-4z-039" firstAttribute="top" secondItem="jct-hw-QCb" secondAttribute="bottom" constant="8" symbolic="YES" id="dVO-gs-aa3"/>
                             <constraint firstItem="Vte-at-7J1" firstAttribute="trailing" secondItem="Qwz-b3-N12" secondAttribute="trailing" id="hMO-8z-I5I"/>
+                            <constraint firstItem="1re-4z-039" firstAttribute="baseline" secondItem="Vte-at-7J1" secondAttribute="firstBaseline" id="i57-Rw-aJw"/>
                             <constraint firstItem="1re-4z-039" firstAttribute="baseline" secondItem="Vte-at-7J1" secondAttribute="baseline" id="ivf-F0-H3G"/>
+                            <constraint firstItem="2mk-bn-dam" firstAttribute="leading" secondItem="1re-4z-039" secondAttribute="trailing" constant="8" symbolic="YES" id="jDa-0Y-p1v"/>
                             <constraint firstItem="1re-4z-039" firstAttribute="top" secondItem="2mk-bn-dam" secondAttribute="top" id="jfD-a3-4qO"/>
+                            <constraint firstItem="Vte-at-7J1" firstAttribute="leading" secondItem="2mk-bn-dam" secondAttribute="trailing" constant="8" symbolic="YES" id="k14-Nj-kPJ"/>
                             <constraint firstItem="Hky-r1-cG1" firstAttribute="top" secondItem="zRU-wa-6KM" secondAttribute="bottom" constant="8" symbolic="YES" id="pJ9-5P-WFM"/>
+                            <constraint firstItem="Vte-at-7J1" firstAttribute="trailing" secondItem="Qwz-b3-N12" secondAttribute="trailing" id="rgZ-gK-t7u"/>
                             <constraint firstItem="Vte-at-7J1" firstAttribute="leading" secondItem="2mk-bn-dam" secondAttribute="trailing" constant="8" symbolic="YES" id="ss8-ua-Opv"/>
+                            <constraint firstItem="Vte-at-7J1" firstAttribute="baseline" secondItem="1re-4z-039" secondAttribute="firstBaseline" id="ynH-Wv-aUt"/>
                             <constraint firstItem="zRU-wa-6KM" firstAttribute="centerX" secondItem="Hky-r1-cG1" secondAttribute="centerX" id="zBC-v1-qH7"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3G2-dq-zll"/>
+                                <exclude reference="282-p1-lpk"/>
+                                <exclude reference="BBB-KT-6R4"/>
+                                <exclude reference="ivf-F0-H3G"/>
+                                <exclude reference="jfD-a3-4qO"/>
+                                <exclude reference="5ZG-0C-XAb"/>
+                                <exclude reference="AMV-iy-9J1"/>
+                                <exclude reference="hMO-8z-I5I"/>
+                                <exclude reference="ss8-ua-Opv"/>
+                            </mask>
+                        </variation>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Add Meal" id="Vg4-E3-Gmq">
@@ -388,6 +432,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cK8-n3-jmD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="829" y="1104"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VUP-iE-aE2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LlJ-1M-sOD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aNG-nd-TDN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3dr-1A-DQG" kind="relationship" relationship="rootViewController" id="pO2-3O-nMr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cj1-si-DRz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1638" y="346"/>
         </scene>
     </scenes>
 </document>
