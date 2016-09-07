@@ -298,45 +298,69 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$0.00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2mk-bn-dam">
-                                <rect key="frame" x="20" y="166" width="560" height="30"/>
+                                <rect key="frame" x="58" y="166" width="484" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vte-at-7J1">
+                                <rect key="frame" x="550" y="166" width="30" height="30"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="addTax:" destination="fHR-ks-uAW" eventType="touchUpInside" id="IgT-1f-LO6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1re-4z-039">
+                                <rect key="frame" x="20" y="166" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="h1k-MK-LSc"/>
+                                </constraints>
+                                <state key="normal" title="-"/>
+                                <connections>
+                                    <action selector="subTax:" destination="fHR-ks-uAW" eventType="touchUpInside" id="O7q-ie-miA"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Restaurant (optional)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qwz-b3-N12">
                                 <rect key="frame" x="20" y="204" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEi-sj-tSh">
-                                <rect key="frame" x="20" y="242" width="560" height="30"/>
-                                <state key="normal" title="Add Meal"/>
-                                <connections>
-                                    <action selector="finishMeal:" destination="fHR-ks-uAW" eventType="touchUpInside" id="qVz-oK-R40"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="zRU-wa-6KM" firstAttribute="top" secondItem="x44-aZ-hMk" secondAttribute="bottom" constant="8" symbolic="YES" id="05g-67-NQC"/>
-                            <constraint firstItem="zRU-wa-6KM" firstAttribute="leading" secondItem="jct-hw-QCb" secondAttribute="leading" id="1Ve-GI-Lqg"/>
-                            <constraint firstItem="Qwz-b3-N12" firstAttribute="leading" secondItem="dEi-sj-tSh" secondAttribute="leading" id="5Wg-nY-bMI"/>
-                            <constraint firstItem="Qwz-b3-N12" firstAttribute="trailing" secondItem="dEi-sj-tSh" secondAttribute="trailing" id="8dA-8v-Z1a"/>
-                            <constraint firstItem="dEi-sj-tSh" firstAttribute="top" secondItem="Qwz-b3-N12" secondAttribute="bottom" constant="8" symbolic="YES" id="E0v-jK-sNc"/>
-                            <constraint firstItem="zRU-wa-6KM" firstAttribute="leading" secondItem="e8I-Bc-cxE" secondAttribute="leadingMargin" id="Ege-eV-VGg"/>
-                            <constraint firstItem="jct-hw-QCb" firstAttribute="top" secondItem="Hky-r1-cG1" secondAttribute="bottom" constant="8" symbolic="YES" id="KZr-TB-ch9"/>
-                            <constraint firstItem="2mk-bn-dam" firstAttribute="top" secondItem="jct-hw-QCb" secondAttribute="bottom" constant="8" symbolic="YES" id="LS2-CM-Rml"/>
-                            <constraint firstItem="zRU-wa-6KM" firstAttribute="centerX" secondItem="Hky-r1-cG1" secondAttribute="centerX" id="WMr-xf-AVk"/>
-                            <constraint firstItem="jct-hw-QCb" firstAttribute="leading" secondItem="2mk-bn-dam" secondAttribute="leading" id="Yl8-0I-kCE"/>
-                            <constraint firstItem="Hky-r1-cG1" firstAttribute="top" secondItem="zRU-wa-6KM" secondAttribute="bottom" constant="8" symbolic="YES" id="Z87-kv-PUd"/>
-                            <constraint firstItem="zRU-wa-6KM" firstAttribute="trailing" secondItem="jct-hw-QCb" secondAttribute="trailing" id="hRe-Rw-1Pj"/>
-                            <constraint firstItem="zRU-wa-6KM" firstAttribute="trailing" secondItem="e8I-Bc-cxE" secondAttribute="trailingMargin" id="hbe-e1-jbs"/>
-                            <constraint firstItem="jct-hw-QCb" firstAttribute="trailing" secondItem="2mk-bn-dam" secondAttribute="trailing" id="jrs-cZ-svL"/>
-                            <constraint firstItem="2mk-bn-dam" firstAttribute="leading" secondItem="Qwz-b3-N12" secondAttribute="leading" id="kzd-7e-RTB"/>
-                            <constraint firstItem="Qwz-b3-N12" firstAttribute="top" secondItem="2mk-bn-dam" secondAttribute="bottom" constant="8" symbolic="YES" id="lf7-YO-Qqu"/>
-                            <constraint firstItem="2mk-bn-dam" firstAttribute="trailing" secondItem="Qwz-b3-N12" secondAttribute="trailing" id="vgE-hY-6e5"/>
+                            <constraint firstItem="1re-4z-039" firstAttribute="leading" secondItem="Qwz-b3-N12" secondAttribute="leading" id="282-p1-lpk"/>
+                            <constraint firstItem="jct-hw-QCb" firstAttribute="leading" secondItem="1re-4z-039" secondAttribute="leading" id="3G2-dq-zll"/>
+                            <constraint firstItem="2mk-bn-dam" firstAttribute="leading" secondItem="1re-4z-039" secondAttribute="trailing" constant="8" symbolic="YES" id="5ZG-0C-XAb"/>
+                            <constraint firstItem="jct-hw-QCb" firstAttribute="centerX" secondItem="2mk-bn-dam" secondAttribute="centerX" id="8Rf-ze-X6E"/>
+                            <constraint firstItem="Qwz-b3-N12" firstAttribute="top" secondItem="1re-4z-039" secondAttribute="bottom" constant="8" symbolic="YES" id="AMV-iy-9J1"/>
+                            <constraint firstItem="1re-4z-039" firstAttribute="top" secondItem="jct-hw-QCb" secondAttribute="bottom" constant="8" symbolic="YES" id="BBB-KT-6R4"/>
+                            <constraint firstItem="zRU-wa-6KM" firstAttribute="leading" secondItem="jct-hw-QCb" secondAttribute="leading" id="Cgn-nm-B9J"/>
+                            <constraint firstItem="jct-hw-QCb" firstAttribute="top" secondItem="Hky-r1-cG1" secondAttribute="bottom" constant="8" symbolic="YES" id="DWQ-jL-GXP"/>
+                            <constraint firstItem="zRU-wa-6KM" firstAttribute="top" secondItem="x44-aZ-hMk" secondAttribute="bottom" constant="8" symbolic="YES" id="Lc4-Ao-WxP"/>
+                            <constraint firstItem="zRU-wa-6KM" firstAttribute="trailing" secondItem="jct-hw-QCb" secondAttribute="trailing" id="Qfq-ur-Bzj"/>
+                            <constraint firstItem="zRU-wa-6KM" firstAttribute="trailing" secondItem="e8I-Bc-cxE" secondAttribute="trailingMargin" id="RzL-Se-O0H"/>
+                            <constraint firstItem="zRU-wa-6KM" firstAttribute="leading" secondItem="e8I-Bc-cxE" secondAttribute="leadingMargin" id="VrY-hq-zaG"/>
+                            <constraint firstItem="Vte-at-7J1" firstAttribute="trailing" secondItem="Qwz-b3-N12" secondAttribute="trailing" id="hMO-8z-I5I"/>
+                            <constraint firstItem="1re-4z-039" firstAttribute="baseline" secondItem="Vte-at-7J1" secondAttribute="baseline" id="ivf-F0-H3G"/>
+                            <constraint firstItem="1re-4z-039" firstAttribute="top" secondItem="2mk-bn-dam" secondAttribute="top" id="jfD-a3-4qO"/>
+                            <constraint firstItem="Hky-r1-cG1" firstAttribute="top" secondItem="zRU-wa-6KM" secondAttribute="bottom" constant="8" symbolic="YES" id="pJ9-5P-WFM"/>
+                            <constraint firstItem="Vte-at-7J1" firstAttribute="leading" secondItem="2mk-bn-dam" secondAttribute="trailing" constant="8" symbolic="YES" id="ss8-ua-Opv"/>
+                            <constraint firstItem="zRU-wa-6KM" firstAttribute="centerX" secondItem="Hky-r1-cG1" secondAttribute="centerX" id="zBC-v1-qH7"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Meal" id="Vg4-E3-Gmq"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Add Meal" id="Vg4-E3-Gmq">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Hdp-cj-edR">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZmK-Vs-dCo">
+                                <rect key="frame" x="527" y="7" width="53" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="finishMeal:" destination="fHR-ks-uAW" eventType="touchUpInside" id="FOc-1f-aHU"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="diningText" destination="2mk-bn-dam" id="PTC-ge-TgM"/>
                         <outlet property="mealCounter" destination="Hky-r1-cG1" id="Ile-OT-s2n"/>

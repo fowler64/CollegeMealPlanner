@@ -10,6 +10,7 @@ import UIKit
 
 class MealViewController: UIViewController {
     //MARK: Outlets
+    var tax = 0.08875
     
     @IBOutlet weak var mealCounter: UISegmentedControl!
 
@@ -19,6 +20,25 @@ class MealViewController: UIViewController {
     
     var last: ViewController?
 
+    @IBAction func addTax(sender: AnyObject) {
+        if diningText.hasText(){
+            var text = Double(diningText.text!)!
+            text = text * (1 + tax)
+            let temp = Int(text*100)
+            text = Double(temp) / 100
+            diningText.text = "\(text)"
+        }
+    }
+    
+    @IBAction func subTax(sender: AnyObject) {
+        if diningText.hasText(){
+            var text = Double(diningText.text!)!
+            text = text / (1 + tax)
+            let temp = Int(text*100+1)
+            text = Double(temp) / 100
+            diningText.text = "\(text)"
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
