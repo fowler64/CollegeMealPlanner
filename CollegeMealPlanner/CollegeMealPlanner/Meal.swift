@@ -126,16 +126,17 @@ class Meal: NSObject, NSCoding {
     
     func getDateString() -> String{
         var dateString = String()
-        var x = 1
+        dateString.append(" ")
         
-        if (NSDateComponents().day - dateComp.day) < 7{
-            x = 0
-            dateString.append(" ")
-        }
-        
-//        add the weekday
         var dateArray = date.description(with: date).components(separatedBy: NSCharacterSet(charactersIn: ",") as CharacterSet)
-        dateString.append(dateArray[x])
+        
+        if (NSDateComponents().day - dateComp.day) > 7{
+            // add month and date
+            dateString.append(dateArray[1])
+        }else{
+//        add the weekday
+            dateString.append(dateArray[0])
+        }
         //add the time
         
         var timeArray = dateArray[2].components(separatedBy: ":")
