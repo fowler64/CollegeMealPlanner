@@ -20,8 +20,8 @@ class MealViewController: UIViewController {
     
     var last: ViewController?
 
-    @IBAction func addTax(sender: AnyObject) {
-        if diningText.hasText(){
+    @IBAction func addTax(_ sender: AnyObject) {
+        if diningText.hasText{
             var text = Double(diningText.text!)!
             text = text * (1 + tax)
             let temp = Int(text*100)
@@ -30,8 +30,8 @@ class MealViewController: UIViewController {
         }
     }
     
-    @IBAction func subTax(sender: AnyObject) {
-        if diningText.hasText(){
+    @IBAction func subTax(_ sender: AnyObject) {
+        if diningText.hasText{
             var text = Double(diningText.text!)!
             text = text / (1 + tax)
             let temp = Int(text*100+1)
@@ -53,18 +53,18 @@ class MealViewController: UIViewController {
     
     
     //MARK: Actions
-    @IBAction func finishMeal(sender: AnyObject) {
+    @IBAction func finishMeal(_ sender: AnyObject) {
         
         let meals = mealCounter.selectedSegmentIndex
         var dinings: Double?
         var restaurantName: String?
         
-        if diningText.hasText(){
+        if diningText.hasText{
             dinings = Double(diningText.text!)
             print("wrote \(dinings)")
         }
         
-        if restaurantText.hasText(){
+        if restaurantText.hasText{
             restaurantName = restaurantText.text
         }
         
@@ -73,7 +73,7 @@ class MealViewController: UIViewController {
             last?.addMeal(meal)
             last?.updateLabels()
             
-            navigationController?.popViewControllerAnimated(true)
+            navigationController?.popViewController(animated: true)
         }
         
         

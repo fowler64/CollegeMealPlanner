@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var DiningLabel: UILabel!
     @IBOutlet weak var MealLabel: UILabel!
     
-    let defaults = NSUserDefaults.standardUserDefaults()
+    let defaults = UserDefaults.standard
     let defaultsKey = "MealList.Money"
 
     let mealList = MealList()
@@ -28,31 +28,31 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func addMeal(meal: Meal){
+    func addMeal(_ meal: Meal){
         mealList.addMeal(meal)
         print("added meal into viewcontroller with \(meal.meals) \(meal.dining) \(meal.restaurant)")
     }
 
-    @IBAction func addMealButton(sender: AnyObject) {
-        performSegueWithIdentifier("addMealSegue", sender: self )
+    @IBAction func addMealButton(_ sender: AnyObject) {
+        performSegue(withIdentifier: "addMealSegue", sender: self )
     }
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let myController = segue.destinationViewController as? MealViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let myController = segue.destination as? MealViewController {
             myController.last = self
         }
-        if let myController = segue.destinationViewController as? MealHistoryViewController {
+        if let myController = segue.destination as? MealHistoryViewController {
             print("going to history")
             myController.setMealList(mealList)
             myController.last = self
         }
-        if let myController = segue.destinationViewController as? SettingsViewController {
+        if let myController = segue.destination as? SettingsViewController {
             myController.last = self
         }
     }
     
     func updateLabels(){
-        var keptValues = defaults.objectForKey(defaultsKey) as? [Int] ?? [0,0]
+        var keptValues = defaults.object(forKey: defaultsKey) as? [Int] ?? [0,0]
         let dining = keptValues[0]
         let swipes = keptValues[1]
         

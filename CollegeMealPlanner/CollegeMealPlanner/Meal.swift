@@ -16,8 +16,49 @@ struct Keys {
     static let date = "dateKey"
 }
 
+extension String {
+    func index(from: Int) -> Index {
+        return self.index(startIndex, offsetBy: from)
+    }
+    
+    func substring(from: Int) -> String {
+        let fromIndex = index(from: from)
+        return substring(from: fromIndex)
+    }
+    
+    func substring(to: Int) -> String {
+        let toIndex = index(from: to)
+        return substring(to: toIndex)
+    }
+    
+    func substring(with r: Range<Int>) -> String {
+        let startIndex = index(from: r.lowerBound)
+        let endIndex = index(from: r.upperBound)
+        return substring(with: startIndex..<endIndex)
+    }
+    
+    func substring(start s: Int, end e: Int) -> String {
+        let startIndex = index(from: s)
+        let endIndex = index(from: e)
+        return substring(with: startIndex..<endIndex)
+    }
+}
+
+
 
 class Meal: NSObject, NSCoding {
+    public func encode(with aCoder: NSCoder) {
+        aCoder.encode(meals, forKey: Keys.meals)
+        if (dining != nil){
+            aCoder.encode(dining!, forKey: Keys.dining)
+        }else{
+            aCoder.encode(0, forKey: Keys.dining)
+        }
+        aCoder.encode(restaurant, forKey: Keys.restaurant)
+        aCoder.encode(dateComp, forKey: Keys.dateComp)
+        aCoder.encode(date, forKey: Keys.date)
+    }
+
     var meals: Int = 0
     var dining: Int?
     var restaurant: String?
@@ -25,27 +66,27 @@ class Meal: NSObject, NSCoding {
     var date = NSDate()
     
     // for saving and restore
-    static let DocumentsDirectory = NSFileManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
-    static let ArchiveURL = DocumentsDirectory.URLByAppendingPathComponent("meals")
+    static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
+    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("meals")
     
     
     func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeInteger(meals, forKey: Keys.meals)
+        aCoder.encode(meals, forKey: Keys.meals)
         if (dining != nil){
-            aCoder.encodeInteger(dining!, forKey: Keys.dining)
+            aCoder.encode(dining!, forKey: Keys.dining)
         }else{
-            aCoder.encodeInteger(0, forKey: Keys.dining)
+            aCoder.encode(0, forKey: Keys.dining)
         }
-        aCoder.encodeObject(restaurant, forKey: Keys.restaurant)
-        aCoder.encodeObject(dateComp, forKey: Keys.dateComp)
-        aCoder.encodeObject(date, forKey: Keys.date)
+        aCoder.encode(restaurant, forKey: Keys.restaurant)
+        aCoder.encode(dateComp, forKey: Keys.dateComp)
+        aCoder.encode(date, forKey: Keys.date)
     }
     
     // if there is data to reload itll reload it
     required convenience init?(coder aDecoder: NSCoder) {
-        let restaurant = aDecoder.decodeObjectForKey(Keys.restaurant) as? String
-        let meals = aDecoder.decodeIntegerForKey(Keys.meals)
-        let dining = aDecoder.decodeIntegerForKey(Keys.dining)
+        let restaurant = aDecoder.decodeObject(forKey: Keys.restaurant) as? String
+        let meals = aDecoder.decodeInteger(forKey: Keys.meals)
+        let dining = aDecoder.decodeInteger(forKey: Keys.dining)
         if dining == 0{
             self.init(meals: meals, dining: nil, restaurant: restaurant)
         }else{
@@ -53,8 +94,8 @@ class Meal: NSObject, NSCoding {
         }
         
         // after init set dates to what they should be
-        dateComp = aDecoder.decodeObjectForKey(Keys.dateComp) as! NSDateComponents
-        date = aDecoder.decodeObjectForKey(Keys.date) as! NSDate
+        dateComp = (aDecoder.decodeObject(forKey: Keys.dateComp) as? NSDateComponents)!
+        date = aDecoder.decodeObject(forKey: Keys.date) as! NSDate
     }
     
     init(meals: Int, dining: Double?, restaurant: String?){
@@ -89,22 +130,25 @@ class Meal: NSObject, NSCoding {
         
         if (NSDateComponents().day - dateComp.day) < 7{
             x = 0
-            dateString.appendContentsOf(" ")
+            dateString.append(" ")
         }
         
-        //add the weekday
-        var dateArray = date.descriptionWithLocale(date).componentsSeparatedByCharactersInSet(NSCharacterSet(charactersInString: ","))
-        dateString.appendContentsOf(dateArray[x])
+//        add the weekday
+        var dateArray = date.description(with: date).components(separatedBy: NSCharacterSet(charactersIn: ",") as CharacterSet)
+        dateString.append(dateArray[x])
         //add the time
-        var timeArray = dateArray[2].componentsSeparatedByString(":")
-        dateString.appendContentsOf(timeArray[0].substringWithRange(Range<String.Index>(timeArray[0].startIndex.advancedBy(5) ..< timeArray[0].endIndex.advancedBy(0))))
-        dateString.appendContentsOf(":")
-        dateString.appendContentsOf(timeArray[1])
+        
+        var timeArray = dateArray[2].components(separatedBy: ":")
+        dateString.append(timeArray[0].substring(from: 5))
+//        dateString.appendContentsOf(timeArray[0].substringWithRange(Range<String.Index>(timeArray[0].startIndex.advancedBy(5) ..< timeArray[0].endIndex.advancedBy(0))))
+        dateString.append(":")
+        dateString.append(timeArray[1])
         //add am or pm
-        if dateArray[2].containsString("PM"){
-            dateString.appendContentsOf(" PM")
+        
+        if (dateArray[2]).contains("PM"){
+            dateString.append(" PM")
         }else {
-            dateString.appendContentsOf(" AM")
+            dateString.append(" AM")
         }
 
         
@@ -115,13 +159,13 @@ class Meal: NSObject, NSCoding {
         var payString = String()
         
         if meals != 0{
-            payString.appendContentsOf("Meals: \(meals) ")
+            payString.append("Meals: \(meals) ")
         }
         if meals != 0 && dining != nil{
-            payString.appendContentsOf("\n")
+            payString.append("\n")
         }
         if dining != nil{
-            payString.appendContentsOf("Dining: $\(Double(dining!) / 100)")
+            payString.append("Dining: $\(Double(dining!) / 100)")
         }
         
         return payString

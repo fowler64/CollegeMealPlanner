@@ -10,7 +10,7 @@ import Foundation
 
 class MealList{
     
-    let defaults = NSUserDefaults.standardUserDefaults()
+    let defaults = UserDefaults.standard
     let defaultsKey = "MealList.Money"
     
     var dining = 50000
@@ -29,18 +29,18 @@ class MealList{
     }
     
     func establishMoney(){
-        var keptValues = defaults.objectForKey(defaultsKey) as? [Int] ?? [0,0]
+        var keptValues = defaults.object(forKey: defaultsKey) as? [Int] ?? [0,0]
         dining = keptValues[0]
         swipes = keptValues[1]
         print("Dining: \(convertDining()) Meal: \(swipes)")
     }
     
     func saveMoney(){
-        defaults.setObject([dining, swipes], forKey: defaultsKey)
+        defaults.set([dining, swipes], forKey: defaultsKey)
     }
     
     
-    func addMeal(toBeAdded: Meal){
+    func addMeal(_ toBeAdded: Meal){
         
         establishMoney()
         
@@ -71,7 +71,7 @@ class MealList{
         }
     }
     
-    func removeMeal(toBeRemoved: Meal){
+    func removeMeal(_ toBeRemoved: Meal){
         
         establishMoney()
         
@@ -88,7 +88,7 @@ class MealList{
         return meals
     }
     
-    func setMeals(meals: [Meal]){
+    func setMeals(_ meals: [Meal]){
         self.meals = meals
         saveMeals()
     }
@@ -99,13 +99,13 @@ class MealList{
     
     // MARK: NSCoding
     func saveMeals() {
-        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(meals, toFile: Meal.ArchiveURL.path!)
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(meals, toFile: Meal.ArchiveURL.path)
         if !isSuccessfulSave {
             print("Failed to save meals...")
         }
     }
     
     func loadMeals() -> [Meal]? {
-        return NSKeyedUnarchiver.unarchiveObjectWithFile(Meal.ArchiveURL.path!) as? [Meal]
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Meal.ArchiveURL.path) as? [Meal]
     }
 }
