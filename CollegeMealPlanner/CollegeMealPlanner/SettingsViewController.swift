@@ -10,7 +10,6 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
-
     @IBOutlet weak var MealField: UITextField!
     @IBOutlet weak var DiningField: UITextField!
     

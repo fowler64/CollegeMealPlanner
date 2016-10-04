@@ -130,7 +130,7 @@ class Meal: NSObject, NSCoding {
         
         var dateArray = date.description(with: date).components(separatedBy: NSCharacterSet(charactersIn: ",") as CharacterSet)
         
-        if (NSDateComponents().day - dateComp.day) > 7{
+        if (NSDateComponents().day - dateComp.day) > 6{
             // add month and date
             dateString.append(dateArray[1])
         }else{
