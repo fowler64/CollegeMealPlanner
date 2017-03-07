@@ -59,5 +59,4 @@ class ViewController: UIViewController {
         MealLabel.text = swipes.description
         DiningLabel.text = "$\(String(Double(dining)/100))"
     }
-
 }

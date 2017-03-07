@@ -44,20 +44,24 @@ extension String {
     }
 }
 
+extension Date {
+    /// Returns the amount of days from another date
+    func days(from date: Date) -> Int {
+        return Calendar.current.dateComponents([.day], from: date, to: self).day ?? 0
+    }
+    /// Returns the amount of hours from another date
+    func hours(from date: Date) -> Int {
+        return Calendar.current.dateComponents([.hour], from: date, to: self).hour ?? 0
+    }
+    /// Returns the amount of minutes from another date
+    func minutes(from date: Date) -> Int {
+        return Calendar.current.dateComponents([.minute], from: date, to: self).minute ?? 0
+    }
+}
+
 
 
 class Meal: NSObject, NSCoding {
-    public func encode(with aCoder: NSCoder) {
-        aCoder.encode(meals, forKey: Keys.meals)
-        if (dining != nil){
-            aCoder.encode(dining!, forKey: Keys.dining)
-        }else{
-            aCoder.encode(0, forKey: Keys.dining)
-        }
-        aCoder.encode(restaurant, forKey: Keys.restaurant)
-        aCoder.encode(dateComp, forKey: Keys.dateComp)
-        aCoder.encode(date, forKey: Keys.date)
-    }
 
     var meals: Int = 0
     var dining: Int?
@@ -69,8 +73,7 @@ class Meal: NSObject, NSCoding {
     static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
     static let ArchiveURL = DocumentsDirectory.appendingPathComponent("meals")
     
-    
-    func encodeWithCoder(aCoder: NSCoder) {
+    public func encode(with aCoder: NSCoder) {
         aCoder.encode(meals, forKey: Keys.meals)
         if (dining != nil){
             aCoder.encode(dining!, forKey: Keys.dining)
@@ -81,6 +84,18 @@ class Meal: NSObject, NSCoding {
         aCoder.encode(dateComp, forKey: Keys.dateComp)
         aCoder.encode(date, forKey: Keys.date)
     }
+    
+//    func encodeWithCoder(aCoder: NSCoder) {
+//        aCoder.encode(meals, forKey: Keys.meals)
+//        if (dining != nil){
+//            aCoder.encode(dining!, forKey: Keys.dining)
+//        }else{
+//            aCoder.encode(0, forKey: Keys.dining)
+//        }
+//        aCoder.encode(restaurant, forKey: Keys.restaurant)
+//        aCoder.encode(dateComp, forKey: Keys.dateComp)
+//        aCoder.encode(date, forKey: Keys.date)
+//    }
     
     // if there is data to reload itll reload it
     required convenience init?(coder aDecoder: NSCoder) {
@@ -94,14 +109,17 @@ class Meal: NSObject, NSCoding {
         }
         
         // after init set dates to what they should be
-        dateComp = (aDecoder.decodeObject(forKey: Keys.dateComp) as? NSDateComponents)!
+        //print("datecomp before \(dateComp)")
+        dateComp = aDecoder.decodeObject(forKey: Keys.dateComp) as! NSDateComponents
+        //print("datecomp after \(dateComp)")
         date = aDecoder.decodeObject(forKey: Keys.date) as! NSDate
+        print("\(restaurant)")
     }
     
     init(meals: Int, dining: Double?, restaurant: String?){
         self.meals = meals
         if restaurant != nil{
-            self.restaurant = " \(restaurant!)"
+            self.restaurant = "\(restaurant!)"
         }
         if dining != nil{
             self.dining = Int(dining! * 100)
@@ -115,7 +133,7 @@ class Meal: NSObject, NSCoding {
     func setValues(meals: Int, dining: Double?, restaurant: String?){
         self.meals = meals
         if restaurant != nil{
-            self.restaurant = " \(restaurant!)"
+            self.restaurant = "\(restaurant!)"
         }
         if dining != nil{
             self.dining = Int(dining! * 100)
@@ -126,11 +144,11 @@ class Meal: NSObject, NSCoding {
     
     func getDateString() -> String{
         var dateString = String()
-        dateString.append(" ")
         
         var dateArray = date.description(with: date).components(separatedBy: NSCharacterSet(charactersIn: ",") as CharacterSet)
         
-        if (NSDateComponents().day - dateComp.day) > 6{
+        print("days since meal \(Date().days(from: date as Date))")
+        if (Date().days(from: date as Date)) > 6{
             // add month and date
             dateString.append(dateArray[1])
         }else{
@@ -141,7 +159,7 @@ class Meal: NSObject, NSCoding {
         
         var timeArray = dateArray[2].components(separatedBy: ":")
         dateString.append(timeArray[0].substring(from: 5))
-//        dateString.appendContentsOf(timeArray[0].substringWithRange(Range<String.Index>(timeArray[0].startIndex.advancedBy(5) ..< timeArray[0].endIndex.advancedBy(0))))
+
         dateString.append(":")
         dateString.append(timeArray[1])
         //add am or pm
@@ -170,5 +188,8 @@ class Meal: NSObject, NSCoding {
         }
         
         return payString
+    }
+    func IntDaysOld() -> Int{
+        return Date().days(from: date as Date)
     }
 }

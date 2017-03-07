@@ -20,6 +20,7 @@ class MealList{
         print("new meal list created")
         populateMeals()
         establishMoney()
+        checkAndRemoveOutdatedMeals()
     }
     
     func populateMeals(){
@@ -82,6 +83,17 @@ class MealList{
             swipes += toBeRemoved.meals
         }
         saveMoney()
+    }
+    
+    func checkAndRemoveOutdatedMeals(){
+        if !meals.isEmpty{
+            if (meals.first?.IntDaysOld())! > 60{
+                meals.removeFirst()
+                checkAndRemoveOutdatedMeals()
+            }else{
+                saveMeals()
+            }
+        }
     }
     
     func getMeals() -> [Meal]{

@@ -26,6 +26,7 @@ class MealHistoryViewController: UITableViewController {
     func setMealList(_ mealList: MealList){
         self.mealList = mealList
         //setUpTestMeals()
+//        meals = self.mealList.getMeals()
         meals = self.mealList.getMeals().reversed()
         print("mealList set")
     }
@@ -84,7 +85,7 @@ class MealHistoryViewController: UITableViewController {
      if editingStyle == .delete {
      // Delete the row from the data source
         mealList.removeMeal(meals.remove(at: (indexPath as NSIndexPath).row))
-        mealList.setMeals(meals)
+        mealList.setMeals(meals.reversed())
         last?.updateLabels()
      tableView.deleteRows(at: [indexPath], with: .fade)
      } else if editingStyle == .insert {

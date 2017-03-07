@@ -22,7 +22,6 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func SaveButtonPressed(_ sender: AnyObject) {
-
         var keptValues = defaults.object(forKey: defaultsKey) as? [Int] ?? [0,0]
         var dining = keptValues[0]
         var meal = keptValues[1]
@@ -41,5 +40,4 @@ class SettingsViewController: UIViewController {
         
         navigationController?.popViewController(animated: true)
     }
-
 }

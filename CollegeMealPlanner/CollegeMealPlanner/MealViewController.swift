@@ -51,10 +51,7 @@ class MealViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    //MARK: Actions
-    @IBAction func finishMeal(_ sender: AnyObject) {
-        
+    func save(){
         let meals = mealCounter.selectedSegmentIndex
         var dinings: Double?
         var restaurantName: String?
@@ -75,8 +72,16 @@ class MealViewController: UIViewController {
             
             navigationController?.popViewController(animated: true)
         }
-        
-        
+    }
+    
+    
+    //MARK: Actions
+    @IBAction func finishMeal(_ sender: AnyObject) {
+        save()
+    }
+
+    @IBAction func RestaurantEnter(_ sender: Any) {
+        save()
     }
     
 }

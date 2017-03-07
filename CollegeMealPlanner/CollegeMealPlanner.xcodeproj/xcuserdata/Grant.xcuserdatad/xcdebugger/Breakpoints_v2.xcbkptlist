@@ -26,7 +26,7 @@
                   moduleName = "CollegeMealPlanner"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Grant/Documents/CodeRepos/collegemealplanner/CollegeMealPlanner/CollegeMealPlanner/MealViewController.swift"
-                  timestampString = "497294409.272099"
+                  timestampString = "510590570.016672"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
@@ -41,7 +41,7 @@
                   moduleName = "CollegeMealPlanner"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Grant/Documents/CodeRepos/collegemealplanner/CollegeMealPlanner/CollegeMealPlanner/MealViewController.swift"
-                  timestampString = "497294409.274827"
+                  timestampString = "510590570.019334"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
@@ -56,7 +56,7 @@
                   moduleName = "CollegeMealPlanner"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Grant/Documents/CodeRepos/collegemealplanner/CollegeMealPlanner/CollegeMealPlanner/MealViewController.swift"
-                  timestampString = "497294409.277643"
+                  timestampString = "510590570.021713"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
@@ -73,13 +73,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CollegeMealPlanner/MealList.swift"
-            timestampString = "494176438.142778"
+            timestampString = "510590347.456031"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "22"
             endingLineNumber = "22"
-            landmarkName = "MealList"
-            landmarkType = "3">
+            landmarkName = "init()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -89,11 +89,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CollegeMealPlanner/Meal.swift"
-            timestampString = "497294408.185792"
+            timestampString = "497542957.883421"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
             landmarkName = "init(coder:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -105,45 +105,29 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CollegeMealPlanner/Meal.swift"
-            timestampString = "497294408.185792"
+            timestampString = "497542957.883421"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
             landmarkName = "init(coder:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CollegeMealPlanner.Meal.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;CollegeMealPlanner.Meal&gt;"
-                  moduleName = "CollegeMealPlanner"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Grant/Documents/CodeRepos/collegemealplanner/CollegeMealPlanner/CollegeMealPlanner/Meal.swift"
-                  timestampString = "497294409.288949"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "97"
-                  endingLineNumber = "97"
-                  offsetFromSymbolStart = "1693">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CollegeMealPlanner.Meal.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;CollegeMealPlanner.Meal&gt;"
-                  moduleName = "CollegeMealPlanner"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Grant/Documents/CodeRepos/collegemealplanner/CollegeMealPlanner/CollegeMealPlanner/Meal.swift"
-                  timestampString = "497294409.29192"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "97"
-                  endingLineNumber = "97"
-                  offsetFromSymbolStart = "3269">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CollegeMealPlanner/MealList.swift"
+            timestampString = "510590749.302134"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "checkAndRemoveOutdatedMeals()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
